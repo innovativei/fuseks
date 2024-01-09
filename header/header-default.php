@@ -3,10 +3,9 @@
 
 <!--
 
-Authors: Studio Ace of Spades
+Authors: Innovative
 Website: http://innovativei.com
-E-Mail: jon@studioaceofspade.com
- 
+
 -->
 
 <head>
