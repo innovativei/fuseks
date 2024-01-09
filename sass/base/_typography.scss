@@ -1,0 +1,15 @@
+%heading {
+    font-family: $header-font;
+}
+
+@for $index from 1 through 4 {
+    h#{$index} {
+        @extend %heading;
+    }
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 30px;
+}

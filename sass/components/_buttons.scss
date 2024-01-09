@@ -1,0 +1,20 @@
+.buttons {
+    margin: 0 -10px 10px;
+
+    .button {
+        position: relative;
+        display: inline-block;
+        margin: 0 10px 20px;
+    }
+}
+
+/*
+
+Usage:
+
+<div class="buttons>
+    <a href="#" class="button">
+    <a href="#" class="button">
+</div>
+
+*/
