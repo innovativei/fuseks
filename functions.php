@@ -19,6 +19,11 @@ function fount_load_scripts() {
     
     wp_enqueue_style('fonts', '//fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap', array(), null);
 
+    //if(ENVIRONMENT == "development") {
+        wp_enqueue_style('main', get_stylesheet_directory_uri().'/devcss/style.css', array(), false, 'all');
+    //} else {
+        //wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.css', array(), false, 'all');
+    //}
 
     if ( is_singular('post') ) { 
       wp_enqueue_script( 'comment-reply' ); 
