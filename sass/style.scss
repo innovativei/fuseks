@@ -13,6 +13,7 @@
 @import "bootstrap/utilities/flex";
 @import "bootstrap/utilities/embed";
 @import "bootstrap/utilities/text";
+@import "bootstrap/utilities/spacing";
 
 /** Base Styles **/
 @import 'base/resets';
@@ -22,11 +23,15 @@
 
 /** Layouts **/
 @import 'layouts/header';
+@import 'layouts/navigation';
 @import 'layouts/hero';
+@import 'layouts/footer';
 
 /** Components **/
 @import 'components/buttons';
 @import 'components/forms';
+@import 'components/slick';
+@import 'components/slider';
 
 /** Pages **/
 @import 'pages/home';

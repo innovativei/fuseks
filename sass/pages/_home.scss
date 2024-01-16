@@ -1,3 +1,82 @@
 #home {
+    >section {
+        border-bottom: 8px solid $black;
+    }
 
+    #order-now {
+        border-left: 0;
+        border-right: 0;
+        background-color: $green;
+
+        .service-man {
+            position: absolute;
+            right: 15px;
+            top: -60px;
+            width: calc(100% - 30px)
+        }
+
+        .header,
+        .subheader {
+            font-family: $serif-header-font;
+            color: $white;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        .header {
+            font-size: 48px;
+            text-transform: uppercase;
+        }
+
+        .subheader {
+            font-size: 32px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    #featured-brands {
+        .slider-hand-arrows {
+            padding: 5px 5px 20px;
+
+            .slick-slide {
+                aspect-ratio: 1 / 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+            }
+        }
+    }
+
+    #about {
+        padding-bottom: 140px;
+        background-image: url(../img/hammer-man.png);
+        background-repeat: no-repeat;
+        background-size: 460px;
+        background-position: 20% center;
+
+        >.icons {
+            position: absolute;
+            width: 100%;
+            bottom: -67px;
+
+            .icon {
+                aspect-ratio: 1 / 1;
+                width: 150px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    #testimonial {
+        span {
+            opacity: 0;
+        }
+    }
 }

@@ -16,8 +16,8 @@ function fount_load_scripts() {
     wp_enqueue_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", false, null);
     wp_enqueue_script('plugins', get_stylesheet_directory_uri().'/js/plugins.js', false, null);
     wp_enqueue_script('scripts', get_stylesheet_directory_uri().'/js/script.js', false, null);
-    
-    wp_enqueue_style('fonts', '//fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap', array(), null);
+    wp_enqueue_script('icons', 'https://kit.fontawesome.com/e4c9cbfaf8.js', false, null);
+    wp_enqueue_style('fonts', '//fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Slab:wght@700;900&family=Roboto:wght@300;400;700&display=swap', array(), null);
 
     //if(ENVIRONMENT == "development") {
         wp_enqueue_style('main', get_stylesheet_directory_uri().'/devcss/style.css', array(), false, 'all');
