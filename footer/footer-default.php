@@ -6,14 +6,14 @@
     <div class="brand d-flex justify-content-center">
         <img src="<?php bloginfo('template_directory'); ?>/img/fuseks-brand-wide.png" alt="" class="img-fluid">
     </div>
-    <div class="container">
+    <div class="container-lg">
         <div class="row justify-content-center">
-            <div class="col-md-5 d-flex flex-column align-items-center">
-                <h2 class="white mb-0">Fusek's True Value Downtown</h2>
-                <p class="white text-center">350 East New York Street<br />Suite 100<br />Indianapolis, IN 46204</p>
+            <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center">
+                <h2 class="white text-center mb-0">Fusek's True Value<br />Downtown</h2>
+                <p class="white text-center">350 East New York Street, Suite 100<br />Indianapolis, IN 46204</p>
                 <p class="white text-center"><strong>Phone:</strong><br />(317) 636-7377</p>
                 <p class="white text-center mb-0"><strong>Store Hours:</strong></p>
-                <table class="text-center mb-0">
+                <table class="text-center mb-3 mb-md-0">
                     <tr>
                         <td>Sun</td>
                         <td>10AM - 6PM</td>
@@ -44,8 +44,8 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-md-5 d-flex flex-column align-items-center">
-                <h2 class="white mb-0">Fusek's True Value East</h2>
+            <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center">
+                <h2 class="white text-center mb-0">Fusek's True Value<br />East</h2>
                 <p class="white text-center">9501 East Washington Street<br />Indianapolis, IN 46229</p>
                 <p class="white text-center"><strong>Phone:</strong><br />(317) 636-7377</p>
                 <p class="white text-center mb-0"><strong>Store Hours:</strong></p>

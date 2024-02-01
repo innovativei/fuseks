@@ -43,3 +43,27 @@ footer {
         }
     }
 }
+
+@include media-breakpoint-down(lg) {
+    footer {
+        padding: 70px 0 20px;
+
+        .brand {
+            top: -49px;
+
+            img {
+                width: 350px;
+            }
+        }
+
+        .jobs {
+            height: 70px;
+
+            a {
+                img {
+                    height: 70px;
+                }
+            }
+        }
+    }
+}
