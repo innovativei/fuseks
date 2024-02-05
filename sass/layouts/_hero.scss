@@ -1,0 +1,12 @@
+.hero {
+    #home-hero-slider {
+        border: 20px solid $white;
+        z-index: 1;
+        margin-bottom: 30px;
+
+        +.hand-arrows {
+            z-index: 3;
+            position: absolute;
+        }
+    }
+}

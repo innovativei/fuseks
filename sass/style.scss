@@ -1,0 +1,37 @@
+/** Variables **/
+@import 'variables';
+
+/** Bootstrap **/
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/reboot";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/utilities/display";
+@import "bootstrap/utilities/flex";
+@import "bootstrap/utilities/embed";
+@import "bootstrap/utilities/text";
+@import "bootstrap/utilities/spacing";
+
+/** Base Styles **/
+@import 'base/resets';
+@import 'base/mixins';
+@import 'base/base';
+@import 'base/typography';
+
+/** Layouts **/
+@import 'layouts/header';
+@import 'layouts/navigation';
+@import 'layouts/hero';
+@import 'layouts/footer';
+
+/** Components **/
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/slick';
+@import 'components/slider';
+
+/** Pages **/
+@import 'pages/home';

@@ -1,0 +1,45 @@
+footer {
+    padding: 80px 0 30px;
+
+    .brand {
+        position: absolute;
+        top: -55px;
+        width: 100%;
+
+        img {
+            width: 400px;
+        }
+    }
+
+    table {
+        @extend p;
+        color: $white;
+        margin: 0 -6px;
+
+        td {
+            padding: 1px 6px;
+        }
+    }
+
+    .jobs {
+        height: 80px;
+        background: 
+            linear-gradient(
+                180deg,
+                rgba($black, 0) 0%,
+                rgba($black, 0) 20%,
+                rgba($gray, 1) 20%,
+                rgba($gray, 1) 80%,
+                rgba($black, 0) 80%,
+                rgba($black, 0) 100%
+            )
+        ;
+
+        a {
+            img {
+                margin-right: 15px;
+                height: 80px;
+            }
+        }
+    }
+}
