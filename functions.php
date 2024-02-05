@@ -52,11 +52,6 @@ function disable_emojis_tinymce( $plugins ) {
     }
 }
 
-function remove_embedded_style() {
-    global $wp_widget_factory;
-    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
-} add_action('wp_enqueue_scripts', 'remove_embedded_style');
-
 // Remove the REST API endpoint.
 remove_action( 'rest_api_init', 'wp_oembed_register_route' );
 
