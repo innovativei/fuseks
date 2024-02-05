@@ -79,12 +79,6 @@
             }
         }
     }
-
-    #testimonial {
-        span {
-            opacity: 0;
-        }
-    }
 }
 
 @include media-breakpoint-down(lg) {

@@ -4811,6 +4811,10 @@ nav.secondary ul.social li + li::before {
     border-width: 10px;
   }
 }
+#testimonial span {
+  opacity: 0;
+}
+
 footer {
   padding: 80px 0 30px;
 }
@@ -5365,9 +5369,6 @@ form .select .select-options li.hide {
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 10px;
-}
-#home #testimonial span {
-  opacity: 0;
 }
 
 @media (max-width: 1199.98px) {
