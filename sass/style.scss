@@ -14,6 +14,7 @@
 @import "bootstrap/utilities/embed";
 @import "bootstrap/utilities/text";
 @import "bootstrap/utilities/spacing";
+@import "bootstrap/utilities/sizing";
 
 /** Base Styles **/
 @import 'base/resets';
@@ -25,6 +26,7 @@
 @import 'layouts/header';
 @import 'layouts/navigation';
 @import 'layouts/hero';
+@import 'layouts/testimonials';
 @import 'layouts/footer';
 
 /** Components **/

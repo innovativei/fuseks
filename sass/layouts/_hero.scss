@@ -3,10 +3,36 @@
         border: 20px solid $white;
         z-index: 1;
         margin-bottom: 30px;
+        aspect-ratio: 16 / 9;
 
         +.hand-arrows {
             z-index: 3;
             position: absolute;
         }
     }
+}
+
+@include media-breakpoint-down(lg) {
+    .hero {
+        #home-hero-slider {
+            border-width: 15px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .hero {
+        #home-hero-slider {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .hero {
+        #home-hero-slider {
+            border-width: 10px;
+        }
+    }
+
 }

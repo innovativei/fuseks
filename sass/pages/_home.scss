@@ -39,7 +39,7 @@
 
     #featured-brands {
         .slider-hand-arrows {
-            padding: 5px 5px 20px;
+            padding: 5px;
 
             .slick-slide {
                 aspect-ratio: 1 / 1;
@@ -48,6 +48,12 @@
                 align-items: center;
                 padding: 15px;
             }
+        }
+    }
+
+    #bargain {
+        .slider-hand-arrows {
+            aspect-ratio: 16 / 9;
         }
     }
 
@@ -73,10 +79,77 @@
             }
         }
     }
+}
 
-    #testimonial {
-        span {
-            opacity: 0;
+@include media-breakpoint-down(lg) {
+    #home {
+        #order-now {
+            .header {
+                font-size: 38px;
+            }
+
+            .subheader {
+                font-size: 26px;
+            }
+        }
+
+        #about {
+            padding-bottom: 100px;
+
+            >.icons {
+                bottom: -59px;
+
+                .icon {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #home {
+        #order-now {
+            .service-man {
+                position: relative;
+                width: auto;
+                top: auto;
+                right: auto;
+            }
+        }
+
+        #featured-brands {
+            .slider-hand-arrows {
+                padding: 0;
+                margin: 0 -15px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #home {
+        #order-now {
+            .header {
+                font-size: 32px;
+            }
+
+            .subheader {
+                font-size: 20px;
+                line-height: 1.4;
+            }
+        }
+
+        #about {
+            padding-bottom: 70px;
+
+            >.icons {
+                bottom: -44px;
+
+                .icon {
+                    width: 90px;
+                }
+            }
         }
     }
 }

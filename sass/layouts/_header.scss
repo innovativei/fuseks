@@ -1,2 +1,16 @@
 header {
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+@include media-breakpoint-down(lg) {
+    header {
+        margin-bottom: 35px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    header {
+        margin-bottom: 10px;
+    }
 }

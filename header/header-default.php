@@ -21,16 +21,8 @@ Website: http://innovativei.com
 
 <body id="top-of-page">
 
-<header class="header cf mt-5 mb-2">
+<header class="header cf">
     <?php include(locate_template('parts/navigation.php')); ?>
-
-    <!--
-    <h1 class="brand">
-        <a href="<?php bloginfo('url'); ?>">
-            <img src="<?php bloginfo('template_directory'); ?>/img/fuseks-brand.png">
-        </a>
-    </h1>
-    -->
 </header>
 
 <main id="main">
