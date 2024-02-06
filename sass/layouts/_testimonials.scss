@@ -1,5 +1,18 @@
 #testimonial {
-    span {
-        opacity: 0;
+    .slick-list {
+        .slick-track {
+            display: flex;
+
+            .slick-slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+
+                span {
+                    opacity: 0;
+                }
+            }
+        }
     }
 }

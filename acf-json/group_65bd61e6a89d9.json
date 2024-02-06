@@ -1,6 +1,6 @@
 {
     "key": "group_65bd61e6a89d9",
-    "title": "Testimonial",
+    "title": "Testimonial - CPT",
     "fields": [
         {
             "key": "field_65bd6508aa483",
@@ -114,5 +114,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706911458
+    "modified": 1707248543
 }

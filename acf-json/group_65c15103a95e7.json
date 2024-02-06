@@ -1,6 +1,6 @@
 {
     "key": "group_65c15103a95e7",
-    "title": "Active Testimonials",
+    "title": "Active Testimonials - Options",
     "fields": [
         {
             "key": "field_65c15103bdb45",
@@ -26,7 +26,7 @@
             "filters": [
                 "search"
             ],
-            "return_format": "object",
+            "return_format": "id",
             "min": "",
             "max": "",
             "elements": "",
@@ -52,5 +52,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707168926
+    "modified": 1707253132
 }
