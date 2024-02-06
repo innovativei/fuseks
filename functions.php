@@ -105,6 +105,13 @@ if(function_exists('acf_add_options_page')) {
         'menu_title'    => 'Footer',
         'parent_slug'   => 'acf-options-site-settings'
     ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Testimonial Settings',
+        'menu_title'    => 'Testimonials',
+        'parent_slug'   => 'acf-options-site-settings'
+    ));
+
 }
 
 function fount_configure_link($link) {
