@@ -18,8 +18,6 @@ if (get_field('show_testimonials_toggle')):
                     foreach($testimonials as $testimonial):
                         $quote  = get_field('testimonial', $testimonial);
                         $name   = get_field('reviewer_name', $testimonial);
-                        if(get_field('reviewer_info', $testimonial))
-                        $info   = get_field('reviewer_info', $testimonial);
                         ?>
                         <div>
                             <div class="row justify-content-center">

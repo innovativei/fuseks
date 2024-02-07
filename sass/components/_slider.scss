@@ -104,6 +104,7 @@
                 .slick-slide {
                     height: inherit;
                     position: relative;
+                    aspect-ratio: 16 / 9;
 
                     &.static {
                         background-size: cover;

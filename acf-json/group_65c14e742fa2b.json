@@ -3,9 +3,9 @@
     "title": "Content",
     "fields": [
         {
-            "key": "field_65c1524e951ba",
-            "label": "",
-            "name": "",
+            "key": "field_65c3bebbcdd4f",
+            "label": "asdf",
+            "name": "asdf",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -26,9 +26,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "block",
                 "operator": "==",
-                "value": "2"
+                "value": ""
             }
         ]
     ],
@@ -41,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707168343
+    "modified": 1707341738
 }

@@ -4789,7 +4789,6 @@ nav.secondary ul.social li + li::before {
   border: 20px solid #fff;
   z-index: 1;
   margin-bottom: 30px;
-  aspect-ratio: 16/9;
 }
 .hero #home-hero-slider + .hand-arrows {
   z-index: 3;
@@ -5145,6 +5144,7 @@ form .select .select-options li.hide {
 .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide {
   height: inherit;
   position: relative;
+  aspect-ratio: 16/9;
 }
 .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide.static {
   background-size: cover;

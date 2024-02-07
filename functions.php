@@ -87,33 +87,6 @@ function clever_debug($object = null) {
     echo "</script>";
 }
 
-if(function_exists('acf_add_options_page')) {
-
-    acf_add_options_page(array(
-        'page_title'    => 'Global Theme Settings',
-        'menu_title'    => 'Site Settings',
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Header Settings',
-        'menu_title'    => 'Header & Navigation',
-        'parent_slug'   => 'acf-options-site-settings'
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Footer Settings',
-        'menu_title'    => 'Footer',
-        'parent_slug'   => 'acf-options-site-settings'
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Testimonial Settings',
-        'menu_title'    => 'Testimonials',
-        'parent_slug'   => 'acf-options-site-settings'
-    ));
-
-}
-
 function fount_configure_link($link) {
     if(!isset($link)) {
         return false;

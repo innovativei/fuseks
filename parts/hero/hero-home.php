@@ -12,9 +12,9 @@
             <div 
                 id="home-hero-slider" 
                 class="slider-hand-arrows drop-shadow" 
-                data-autoplay="true" 
+                data-autoplay="true"
             >
-            <div class="youtube">
+                <div class="youtube">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/BhwkP9bHPEY?color=white" frameborder="0" allowfullscreen></iframe>
                     </div>
