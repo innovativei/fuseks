@@ -4,16 +4,14 @@
         allSliders();
         mobileNav();
 
-        /*
-        smoothScroll();
-        */
+        //smoothScroll();
     });
 
     function mobileNav() {
         var trigger = $('#mobile-menu-trigger'),
             menu    = $('#mobile-menu');
 
-        $(trigger).click(function () {
+        $(trigger).click(function() {
             if ($(menu).hasClass('open')) {
                 killMobileMenu();
             } else {
@@ -24,15 +22,32 @@
         });
 
         $(window).on("resize",function(){
-            if ( window.innerWidth >= 992 ) {
+            if (window.innerWidth >= 992) {
                 killMobileMenu();
             }
+        });
+
+        var flyoutTrigger   = $('#mobile-menu li.flyout .flyout-trigger'),
+            flyoutPanel     = $(flyoutTrigger).siblings('.flyout-wrapper'),
+            mainMenuNav     = $(menu).children('nav'),
+            flyoutReturn    = $(flyoutPanel).children('.flyout-return');
+
+        $(flyoutTrigger).click(function() {
+            $(this).siblings('.flyout-wrapper').removeClass('invisible');
+            $(mainMenuNav).addClass('off-screen');
+        });
+
+        $(flyoutReturn).click(function() {
+            $(mainMenuNav).removeClass('off-screen');
+            $(this).parent('.flyout-wrapper').addClass('invisible');
         });
 
         function killMobileMenu() {
             $(menu).removeClass('open');
             $(trigger).removeClass('open');
             $('body').removeClass('overflow-hidden');
+            $(flyoutPanel).addClass('invisible');
+            $(mainMenuNav).removeClass('off-screen');
         }
     }
 

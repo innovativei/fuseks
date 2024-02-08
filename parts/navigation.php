@@ -15,12 +15,47 @@ if(
                         the_row();
                         $link = get_sub_field('sec_link');
                         if($link):
-                            $link_url = $link['url'];
-                            $link_title = $link['title'];
-                            $link_target = $link['target'] ? $link['target'] : '_self';
+                            $link_url       = $link['url'];
+                            $link_title     = $link['title'];
+                            $link_target    = $link['target'] ? $link['target'] : '_self';
+                            if(
+                                get_sub_field('sec_dropdown', 'option') && 
+                                have_rows('sec_dropdown_links', 'option')
+                            ):
+                                $dd_class = "dropdown";
+                            else:
+                                $dd_class = "";
+                            endif;
                             ?>
-                            <li>
-                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                            <li class="<?php echo $dd_class; ?>">
+                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                                    <?php echo esc_html($link_title); ?>
+                                </a>
+                                <div class="dropdown-wrapper">
+                                    <div class="arrow"></div>
+                                    <div class="links">
+                                        <ul>
+                                            <?php
+                                            while(have_rows('sec_dropdown_links', 'option')):
+                                                the_row();
+                                                $link = get_sub_field('sec_dropdown_link');
+                                                if($link):
+                                                    $dd_link_url    = $link['url'];
+                                                    $dd_link_title  = $link['title'];
+                                                    $dd_link_target = $link['target'] ? $link['target'] : '_self';
+                                                    ?>
+                                                    <li>
+                                                        <a href="<?php echo esc_url($dd_link_url); ?>" target="<?php echo esc_attr($dd_link_target); ?>">
+                                                            <?php echo esc_html($dd_link_title); ?>
+                                                        </a>
+                                                    </li>
+                                                    <?php
+                                                endif;
+                                            endwhile;
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                             <?php
                         endif;
@@ -39,7 +74,9 @@ if(
                         $link = get_sub_field('link');
                         ?>
                         <li>
-                            <a href="<?php echo esc_url($link); ?>"><?php echo $icon; ?></a>
+                            <a href="<?php echo esc_url($link); ?>" target="_blank">
+                                <?php echo $icon; ?>
+                            </a>
                         </li>
                         <?php
                     endwhile;
@@ -76,12 +113,47 @@ if(
                         the_row();
                         $link = get_sub_field('pri_link');
                         if($link):
-                            $link_url = $link['url'];
-                            $link_title = $link['title'];
-                            $link_target = $link['target'] ? $link['target'] : '_self';
+                            $link_url       = $link['url'];
+                            $link_title     = $link['title'];
+                            $link_target    = $link['target'] ? $link['target'] : '_self';
+                            if(
+                                get_sub_field('pri_dropdown', 'option') && 
+                                have_rows('pri_dropdown_links', 'option')
+                            ):
+                                $dd_class = "dropdown";
+                            else:
+                                $dd_class = "";
+                            endif;
                             ?>
-                            <li>
-                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                            <li class="<?php echo $dd_class; ?>">
+                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                                    <?php echo esc_html($link_title); ?>
+                                </a>
+                                <div class="dropdown-wrapper">
+                                    <div class="arrow"></div>
+                                    <div class="links">
+                                        <ul>
+                                            <?php
+                                            while(have_rows('pri_dropdown_links', 'option')):
+                                                the_row();
+                                                $link = get_sub_field('pri_dropdown_link');
+                                                if($link):
+                                                    $dd_link_url    = $link['url'];
+                                                    $dd_link_title  = $link['title'];
+                                                    $dd_link_target = $link['target'] ? $link['target'] : '_self';
+                                                    ?>
+                                                    <li>
+                                                        <a href="<?php echo esc_url($dd_link_url); ?>" target="<?php echo esc_attr($dd_link_target); ?>">
+                                                            <?php echo esc_html($dd_link_title); ?>
+                                                        </a>
+                                                    </li>
+                                                    <?php
+                                                endif;
+                                            endwhile;
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                             <?php
                         endif;
@@ -119,17 +191,65 @@ if(
                         the_row();
                         $link = get_sub_field('pri_link');
                         if($link):
-                            $link_url = $link['url'];
-                            $link_title = $link['title'];
-                            $link_target = $link['target'] ? $link['target'] : '_self';
-                            ?>
-                            <li>
-                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                            </li>
-                            <?php
+                            $link_url       = $link['url'];
+                            $link_title     = $link['title'];
+                            $link_target    = $link['target'] ? $link['target'] : '_self';
+                            if(
+                                get_sub_field('pri_dropdown', 'option') && 
+                                have_rows('pri_dropdown_links', 'option')
+                            ):
+                                ?>
+                                <li class="flyout">
+                                    <div class="flyout-trigger"><?php echo esc_html($link_title); ?></div>
+                                    <div class="flyout-wrapper invisible">
+                                        <div class="flyout-return">Main Menu</div>
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <div class="divider"></div>
+                                                </li>
+                                                <?php
+                                                while(have_rows('pri_dropdown_links', 'option')):
+                                                    the_row();
+                                                    $link = get_sub_field('pri_dropdown_link');
+                                                    if($link):
+                                                        $dd_link_url    = $link['url'];
+                                                        $dd_link_title  = $link['title'];
+                                                        $dd_link_target = $link['target'] ? $link['target'] : '_self';
+                                                        ?>
+                                                        <li>
+                                                            <a href="<?php echo esc_url($dd_link_url); ?>" target="<?php echo esc_attr($dd_link_target); ?>">
+                                                                <?php echo esc_html($dd_link_title); ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php
+                                                    endif;
+                                                endwhile;
+                                                ?>
+                                                <li>
+                                                    <div class="divider"></div>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <a href="<?php echo $link_url; ?>" class="view-all">View all <?php echo esc_html($link_title); ?></a>
+                                    </div>
+                                </li>
+                                <?php
+                            else:
+                                ?>
+                                <li>
+                                    <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                                        <?php echo esc_html($link_title); ?>
+                                    </a>
+                                </li>
+                                <?php
+                            endif;
                         endif;
                     endwhile;
                     ?>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
                 </ul>
                 <?php
             endif;
@@ -141,17 +261,65 @@ if(
                         the_row();
                         $link = get_sub_field('sec_link');
                         if($link):
-                            $link_url = $link['url'];
-                            $link_title = $link['title'];
-                            $link_target = $link['target'] ? $link['target'] : '_self';
-                            ?>
-                            <li>
-                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                            </li>
-                            <?php
+                            $link_url       = $link['url'];
+                            $link_title     = $link['title'];
+                            $link_target    = $link['target'] ? $link['target'] : '_self';
+                            if(
+                                get_sub_field('sec_dropdown', 'option') && 
+                                have_rows('sec_dropdown_links', 'option')
+                            ):
+                                ?>
+                                <li class="flyout">
+                                    <div class="flyout-trigger"><?php echo esc_html($link_title); ?></div>
+                                    <div class="flyout-wrapper invisible">
+                                        <div class="flyout-return">Main Menu</div>
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <div class="divider"></div>
+                                                </li>
+                                                <?php
+                                                while(have_rows('sec_dropdown_links', 'option')):
+                                                    the_row();
+                                                    $link = get_sub_field('sec_dropdown_link');
+                                                    if($link):
+                                                        $dd_link_url    = $link['url'];
+                                                        $dd_link_title  = $link['title'];
+                                                        $dd_link_target = $link['target'] ? $link['target'] : '_self';
+                                                        ?>
+                                                        <li>
+                                                            <a href="<?php echo esc_url($dd_link_url); ?>" target="<?php echo esc_attr($dd_link_target); ?>">
+                                                                <?php echo esc_html($dd_link_title); ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php
+                                                    endif;
+                                                endwhile;
+                                                ?>
+                                                <li>
+                                                    <div class="divider"></div>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <a href="<?php echo $link_url; ?>" class="view-all">View all <?php echo esc_html($link_title); ?></a>
+                                    </div>
+                                </li>
+                                <?php
+                            else:
+                                ?>
+                                <li>
+                                    <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                                        <?php echo esc_html($link_title); ?>
+                                    </a>
+                                </li>
+                                <?php
+                            endif;
                         endif;
                     endwhile;
                     ?>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
                 </ul>
                 <?php
             endif;
@@ -165,7 +333,9 @@ if(
                         $link = get_sub_field('link');
                         ?>
                         <li>
-                            <a href="<?php echo esc_url($link); ?>"><?php echo $icon; ?></a>
+                            <a href="<?php echo esc_url($link); ?>" target="_blank">
+                                <?php echo $icon; ?>
+                            </a>
                         </li>
                         <?php
                     endwhile;

@@ -4178,6 +4178,14 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100vh !important;
 }
 
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
 /** Base Styles **/
 * {
   margin: 0;
@@ -4287,11 +4295,18 @@ form input[type=radio] + label::before,
 form input[type=radio] + label::after,
 form input[type=checkbox] + label::before,
 form input[type=checkbox] + label::after,
+#mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return,
+#mobile-menu nav ul li.flyout .flyout-wrapper,
+#mobile-menu nav,
 #mobile-menu,
 nav.primary #mobile-menu-trigger .bars::before,
 nav.primary #mobile-menu-trigger .bars::after,
 nav.primary #mobile-menu-trigger .bars,
 nav.primary #mobile-menu-trigger,
+nav.primary ul li.dropdown .dropdown-wrapper .arrow,
+nav.secondary ul li.dropdown .dropdown-wrapper .arrow,
+nav.primary ul li.dropdown .dropdown-wrapper,
+nav.secondary ul li.dropdown .dropdown-wrapper,
 .transition:hover,
 .slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button:hover::before {
   transition: all 0.3s ease;
@@ -4337,7 +4352,7 @@ nav.primary #mobile-menu-trigger,
   height: 100%;
 }
 
-.bna, .slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button::before, .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide.content::before, .slider-wrapper .corner::before, .slider-wrapper .corner::after, #mobile-menu nav ul::before, nav.primary #mobile-menu-trigger .bars::before, nav.primary #mobile-menu-trigger .bars::after, .inset-shadow::after {
+.bna, .slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button::before, .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide.content::before, .slider-wrapper .corner::before, .slider-wrapper .corner::after, #mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return::before, #mobile-menu nav ul li.flyout::before, nav.primary #mobile-menu-trigger .bars::before, nav.primary #mobile-menu-trigger .bars::after, nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before, .inset-shadow::after {
   content: "";
   position: absolute;
   display: block;
@@ -4347,7 +4362,7 @@ nav.primary #mobile-menu-trigger,
   overflow: hidden;
 }
 
-.drop-shadow {
+.drop-shadow, nav.primary ul li.dropdown .dropdown-wrapper .links, nav.secondary ul li.dropdown .dropdown-wrapper .links, nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before {
   box-shadow: 0px 0px 30px -10px black;
 }
 
@@ -4518,6 +4533,75 @@ nav ul {
 nav ul li {
   display: inline-block;
 }
+nav.primary ul li.dropdown, nav.secondary ul li.dropdown {
+  position: relative;
+}
+nav.primary ul li.dropdown:hover .dropdown-wrapper, nav.secondary ul li.dropdown:hover .dropdown-wrapper {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 25px;
+}
+nav.primary ul li.dropdown:hover .dropdown-wrapper .arrow, nav.secondary ul li.dropdown:hover .dropdown-wrapper .arrow {
+  bottom: calc(100% - 25px);
+}
+nav.primary ul li.dropdown .dropdown-wrapper, nav.secondary ul li.dropdown .dropdown-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  padding-top: 15px;
+  border-radius: 6px;
+  left: 50%;
+  transform: translate(-50%);
+  visibility: hidden;
+  opacity: 0;
+}
+nav.primary ul li.dropdown .dropdown-wrapper .arrow, nav.secondary ul li.dropdown .dropdown-wrapper .arrow {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 40px;
+  height: 15px;
+  overflow: hidden;
+  z-index: 11;
+  bottom: calc(100% - 15px);
+}
+nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background-color: #8d9f80;
+  transform: translate(-50%) rotate(45deg);
+  left: 50%;
+  top: 5px;
+}
+nav.primary ul li.dropdown .dropdown-wrapper .links, nav.secondary ul li.dropdown .dropdown-wrapper .links {
+  position: relative;
+  z-index: 10;
+  border-radius: 6px;
+  background-color: #8d9f80;
+  padding: 10px 0;
+}
+nav.primary ul li.dropdown .dropdown-wrapper .links ul, nav.secondary ul li.dropdown .dropdown-wrapper .links ul {
+  margin: 0;
+}
+nav.primary ul li.dropdown .dropdown-wrapper .links ul li, nav.secondary ul li.dropdown .dropdown-wrapper .links ul li {
+  display: block;
+}
+nav.primary ul li.dropdown .dropdown-wrapper .links ul li:first-child a, nav.secondary ul li.dropdown .dropdown-wrapper .links ul li:first-child a {
+  background-color: transparent;
+}
+nav.primary ul li.dropdown .dropdown-wrapper .links ul li a, nav.secondary ul li.dropdown .dropdown-wrapper .links ul li a {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  padding: 4px 15px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+nav.primary ul li.dropdown .dropdown-wrapper .links ul li a:hover, nav.secondary ul li.dropdown .dropdown-wrapper .links ul li a:hover {
+  color: #F2DAB2;
+}
 nav.primary {
   height: 272px;
   margin-top: -60px;
@@ -4644,6 +4728,14 @@ nav.secondary ul.social li + li::before {
   display: none;
 }
 
+.mobile-menu-text, #mobile-menu nav ul.secondary li a, #mobile-menu nav ul.primary li a, #mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return,
+#mobile-menu nav ul li.flyout .flyout-wrapper .view-all, #mobile-menu nav ul li.flyout .flyout-trigger {
+  font-family: "Roboto Slab", serif;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
 #mobile-menu {
   position: absolute;
   top: 100vh;
@@ -4653,11 +4745,11 @@ nav.secondary ul.social li + li::before {
   background-color: #8d9f80;
   z-index: -1;
   opacity: 0;
-  padding: 50px 30px 0;
   background-image: url(../img/hammer-man.png);
   background-repeat: no-repeat;
   background-position: -10% 10%;
   background-size: auto 110%;
+  overflow: hidden;
 }
 #mobile-menu.open {
   top: 124px;
@@ -4665,56 +4757,113 @@ nav.secondary ul.social li + li::before {
   opacity: 1;
 }
 #mobile-menu nav {
-  text-align: right;
-  padding: 0;
-}
-#mobile-menu nav ul {
   position: relative;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  text-align: right;
+  padding: 50px 30px 15px;
+  right: 0%;
 }
-#mobile-menu nav ul::before {
-  position: absolute;
-  height: 4px;
-  width: 150px;
-  background-color: #393939;
-  right: 15px;
-  bottom: -2px;
+#mobile-menu nav.off-screen {
+  right: 100%;
 }
 #mobile-menu nav ul li {
   display: block;
 }
+#mobile-menu nav ul li.flyout::before {
+  right: 30px;
+  transform: translateY(-50%);
+  font: var(--fa-font-solid);
+  content: "\f0da";
+  color: #fff;
+}
+#mobile-menu nav ul li.flyout .flyout-trigger {
+  padding: 5px 15px;
+  cursor: pointer;
+  display: inline-block;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper {
+  position: absolute;
+  width: 100vw;
+  left: 100%;
+  top: 0;
+  padding: 50px 30px 15px;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper.invisible {
+  opacity: 0;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return,
+#mobile-menu nav ul li.flyout .flyout-wrapper .view-all {
+  padding: 5px 15px;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return {
+  font-size: 24px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return::before {
+  left: 0;
+  transform: translateY(-50%);
+  font: var(--fa-font-solid);
+  content: "\f0d9";
+  color: #fff;
+  top: 50%;
+  font-size: 16px;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper nav {
+  padding: 0;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper nav ul li:last-child::after {
+  bottom: -17px;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper nav ul li a {
+  font-size: 20px;
+}
+#mobile-menu nav ul li.flyout .flyout-wrapper .view-all {
+  font-size: 16px;
+}
 #mobile-menu nav ul li a {
-  display: block;
+  display: inline-block;
   padding: 5px 15px;
   color: #fff;
   line-height: 1;
 }
-#mobile-menu nav ul.primary li a {
-  font-family: "Roboto Slab", serif;
-  color: #fff;
+#mobile-menu nav ul li .divider {
+  height: 4px;
+  width: 150px;
+  background-color: #393939;
+  margin: 15px 15px 15px auto;
+}
+#mobile-menu nav ul.primary li.flyout::before {
+  margin-top: 18px;
+}
+#mobile-menu nav ul.primary li.flyout .flyout-trigger {
   font-size: 24px;
-  text-transform: uppercase;
-  display: block;
+}
+#mobile-menu nav ul.primary li a {
+  font-size: 24px;
+}
+#mobile-menu nav ul.secondary li.flyout::before {
+  margin-top: 15px;
+}
+#mobile-menu nav ul.secondary li.flyout .flyout-trigger {
+  font-size: 20px;
 }
 #mobile-menu nav ul.secondary li a {
-  font-family: "Roboto Slab", serif;
   font-size: 20px;
-  text-transform: uppercase;
 }
 #mobile-menu nav ul.social {
   padding-bottom: 0;
   margin-bottom: 0;
   margin-right: 15px;
 }
-#mobile-menu nav ul.social::before {
-  display: none;
-}
 #mobile-menu nav ul.social li {
   display: inline-block;
 }
 #mobile-menu nav ul.social li:first-child a {
   margin-left: 0;
+}
+#mobile-menu nav ul.social li:last-child::after {
+  display: none;
 }
 #mobile-menu nav ul.social li a {
   font-size: 22px;
@@ -4766,7 +4915,14 @@ nav.secondary ul.social li + li::before {
     padding-left: 0;
     padding-right: 0;
   }
-  #mobile-menu {
+  #mobile-menu nav {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #mobile-menu nav ul li.flyout::before {
+    right: 8px;
+  }
+  #mobile-menu nav ul li.flyout .flyout-wrapper {
     padding-left: 5px;
     padding-right: 5px;
   }
