@@ -21,31 +21,11 @@
             "esc_html": 0
         },
         {
-            "key": "field_65bd61e7592b4",
-            "label": "Testimonial Quote",
-            "name": "testimonial",
+            "key": "field_65c64f1d17758",
+            "label": "Testimonial Type",
+            "name": "testimonial_type",
             "aria-label": "",
-            "type": "textarea",
-            "instructions": "Do not add quotation marks. They will added automatically. It is also best to keep this relatively short.",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": 4,
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_65bd63b3592b5",
-            "label": "Reviewer Name",
-            "name": "reviewer_name",
-            "aria-label": "",
-            "type": "text",
+            "type": "radio",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -54,31 +34,135 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "text": "Text",
+                "video": "Video"
+            },
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         },
         {
-            "key": "field_65bd6450592b6",
-            "label": "Reviewer Info",
-            "name": "reviewer_info",
+            "key": "field_65c650d917759",
+            "label": "Text Testimonial",
+            "name": "text_testimonial",
             "aria-label": "",
-            "type": "text",
-            "instructions": "Example:\r\n<em>Customer since 2018<\/em>",
+            "type": "group",
+            "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c64f1d17758",
+                        "operator": "==",
+                        "value": "text"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_65bd61e7592b4",
+                    "label": "Testimonial Quote",
+                    "name": "testimonial",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Do not add quotation marks. They will added automatically. It is also best to keep this relatively short.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_65bd63b3592b5",
+                    "label": "Reviewer Name",
+                    "name": "reviewer_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65bd6450592b6",
+                    "label": "Reviewer Info",
+                    "name": "reviewer_info",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Example:\r\n<em>Customer since 2018<\/em>",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_65c6511c1775a",
+            "label": "Video Testimonial Type",
+            "name": "video_testimonial_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c64f1d17758",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "youtube": "YouTube",
+                "vimeo": "Vimeo"
+            },
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -114,5 +198,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707248543
+    "modified": 1707496060
 }

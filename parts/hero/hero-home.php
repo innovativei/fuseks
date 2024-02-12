@@ -14,6 +14,7 @@
                 class="slider-hand-arrows drop-shadow" 
                 data-autoplay="true"
             >
+                <!--
                 <div class="youtube">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/BhwkP9bHPEY?color=white" frameborder="0" allowfullscreen></iframe>
@@ -25,6 +26,7 @@
                     </div>
                     <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
+                -->
                 <div class="static" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/get-hammered.png);"></div>
                 <div class="linked-image">
                     <a href="#" target="_blank" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/lighting.png);"></a>
@@ -44,19 +46,21 @@
             <div class="slider-dots d-block d-lg-none"></div>
         </div>
     </div>
-    <div id="store-select" class="gen-wrapper mb-3">
+    <div id="store-select" class="gen-wrapper">
         <div class="container">
             <h1 class="black">Select Your Store</h1>
             <div class="row">
-                <div class="col-md-6">
-                    <a href="#" target="_blank" class="d-block white-frame drop-shadow inset-shadow mb-3 mb-md-0">
-                        <img src="https://picsum.photos/800/600?random=1" class="img-fluid">
+                <div class="col-md-6 mb-3">
+                    <a href="#" target="_blank" class="d-block white-frame drop-shadow inset-shadow mb-1">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/fpo/downtown.webp" class="img-fluid">
                     </a>
+                    <h2 class="black mb-0">Fusek's True Value Downtown</h2>
                 </div>
                 <div class="col-md-6">
-                    <a href="#" target="_blank" class="d-block white-frame drop-shadow inset-shadow">
-                        <img src="https://picsum.photos/800/600?random=2" class="img-fluid">
+                    <a href="#" target="_blank" class="d-block white-frame drop-shadow inset-shadow mb-1">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/fpo/east.webp" class="img-fluid">
                     </a>
+                    <h2 class="black mb-0">Fusek's True Value East</h2>
                 </div>
             </div>
         </div>

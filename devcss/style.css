@@ -4949,6 +4949,11 @@ nav.secondary ul.social li + li::before {
 .hero #home-hero-slider + .hand-arrows {
   z-index: 3;
   position: absolute;
+  /*
+  .slick-slide {
+      aspect-ratio: 16 / 9;
+  }
+  */
 }
 
 @media (max-width: 1199.98px) {

@@ -166,7 +166,7 @@ if(
             <div id="mobile-menu-trigger" class="d-flex justify-content-center align-items-start d-lg-none no-select">
                 <div class="icon-container transition d-flex flex-column align-items-center">
                     <div class="bars"></div>
-                    <i class="fa-solid fa-caret-down transition"></i>
+                    <i class="fa-solid fa-xmark transition"></i>
                 </div>
             </div>
         </div>
