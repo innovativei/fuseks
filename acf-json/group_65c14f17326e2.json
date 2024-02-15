@@ -1,6 +1,6 @@
 {
     "key": "group_65c14f17326e2",
-    "title": "Home Template",
+    "title": "Home - Page",
     "fields": [
         {
             "key": "field_65c153b809fb9",
@@ -23,6 +23,316 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_65cb85f24f97b",
+            "label": "Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65cb86214f97d",
+            "label": "Hero Slider",
+            "name": "hero_slider",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_65cb86a45d694": {
+                    "key": "layout_65cb86a45d694",
+                    "name": "simple_image",
+                    "label": "Simple Image",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_65cb86c2fff24",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_width": 910,
+                            "min_height": 512,
+                            "min_size": "",
+                            "max_width": 910,
+                            "max_height": 512,
+                            "max_size": "",
+                            "mime_types": ".png, .webp, .jpg, .jpeg",
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65cb8851d7555": {
+                    "key": "layout_65cb8851d7555",
+                    "name": "linked_image",
+                    "label": "Linked Image",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_65cb8ad7d7558",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_width": 910,
+                            "min_height": 512,
+                            "min_size": "",
+                            "max_width": 910,
+                            "max_height": 512,
+                            "max_size": "",
+                            "mime_types": ".png, .webp, .jpg, .jpeg",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_65cb8aead7559",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "The link text does not matter for this layout.",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65cb8b58d755a": {
+                    "key": "layout_65cb8b58d755a",
+                    "name": "content",
+                    "label": "Content",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_65cb8b6cd755f",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_width": 910,
+                            "min_height": 512,
+                            "min_size": "",
+                            "max_width": 910,
+                            "max_height": 512,
+                            "max_size": "",
+                            "mime_types": ".png, .webp, .jpg, .jpeg",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_65cb8b96d7561",
+                            "label": "Header",
+                            "name": "header",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Best to keep this short.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65cb8bb6d7562",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Best to keep this relatively short. Maybe a sentence or two.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65cb8b6fd7560",
+                            "label": "Button Link",
+                            "name": "button_link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65cb8c19d7563": {
+                    "key": "layout_65cb8c19d7563",
+                    "name": "youtube_video",
+                    "label": "YouTube Video",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_65cb8e7983dce",
+                            "label": "Instructions",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<strong>Note:<\/strong><br \/>This will only work with videos in the 16:9 aspect ratio. If the video is not in that ratio, it may not display correctly, and may effect displaying other slides correctly as well.<br \/><br \/><strong>How to find the YouTube share link:<\/strong><br \/><ol><li>Go to the video on YouTube.<\/li><li>Click \"Share\".<\/li><li>Copy the link in  the modal that appears.<\/li><\/ol><br \/><strong>Do not use the embed code!<\/strong><br \/>The link should look similar to the following:<br \/><em>https:\/\/youtu.be\/dQw4w9WgXcQ?si=nbf-Ze5Bqu3NgmXG<\/em>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_65cb8c32d7568",
+                            "label": "YouTube Video Share Link",
+                            "name": "youtube_video_share_link",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "https:\/\/youtu.be\/dQw4w9WgXcQ?si=nbf-Ze5Bqu3NgmXG",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65cbae30ce0ec": {
+                    "key": "layout_65cbae30ce0ec",
+                    "name": "vimeo_video",
+                    "label": "Vimeo Video",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_65cbae30ce0ed",
+                            "label": "Instructions",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<strong>Note:<\/strong><br \/>This will only work with videos in the 16:9 aspect ratio. If the video is not in that ratio, it may not display correctly, and may effect displaying other slides correctly as well.<br \/><br \/><strong>How to find the Vimeo share link:<\/strong><br \/><ol><li>Go to the video on Vimeo.<\/li><li>Click \"Share\".<\/li><li>Copy the link in the modal that appears.<\/li><\/ol><br \/><strong>Do not use the embed code!<\/strong><br \/>The link should look similar to the following:<br \/><em>https:\/\/vimeo.com\/883294526\/d15579e427?share=copy<\/em><br \/>Or<br \/><em>https:\/\/vimeo.com\/375468729<\/em>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_65cbae30ce0ee",
+                            "label": "Vimeo Video Share Link",
+                            "name": "vimeo_video_share_link",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "https:\/\/vimeo.com\/883294526\/d15579e427?share=copy or https:\/\/vimeo.com\/375468729",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Slide"
         }
     ],
     "location": [
@@ -56,5 +366,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707250341
+    "modified": 1707848059
 }

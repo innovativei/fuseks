@@ -1,16 +1,57 @@
 #testimonial {
-    .slick-list {
-        .slick-track {
-            display: flex;
+    .slider-wrapper {
+        .slider-hand-arrows {
+            .slick-list {
+                .slick-track {
+                    display: flex;
 
-            .slick-slide {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: auto;
+                    .slick-slide {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: auto;
+                        aspect-ratio: auto;
 
-                span {
-                    opacity: 0;
+                        span {
+                            opacity: 0;
+                        }
+
+                        .drop-shadow {
+                            margin: 30px;
+                        }
+                    }
+                }
+            }
+
+            + .hand-arrows {
+                .arrow {
+                    &.prev {
+                        left: -50px;
+                    }
+
+                    &.next {
+                        right: -50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    #testimonial {
+        .slider-wrapper {
+            .slider-hand-arrows {
+                + .hand-arrows {
+                    .arrow {
+                        &.prev {
+                            left: -30px;
+                        }
+
+                        &.next {
+                            right: -30px;
+                        }
+                    }
                 }
             }
         }

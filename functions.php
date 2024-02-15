@@ -15,6 +15,8 @@ function fount_load_scripts() {
     
     wp_enqueue_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", false, null);
     wp_enqueue_script('plugins', get_stylesheet_directory_uri().'/js/plugins.js', false, null);
+    wp_enqueue_script('vimeo', 'https://player.vimeo.com/api/player.js', false, null);
+
     wp_enqueue_script('scripts', get_stylesheet_directory_uri().'/js/script.js', false, null);
     wp_enqueue_script('icons', 'https://kit.fontawesome.com/e4c9cbfaf8.js', false, null);
     wp_enqueue_style('fonts', '//fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Slab:wght@700;900&family=Roboto:wght@300;400;700&display=swap', array(), null);
@@ -108,10 +110,61 @@ function fount_configure_link($link) {
     return $link;
 }
 
+/*
+Currently not used
 function fount_output_link($link, $classes="") {
     $link = fount_configure_link($link);
     if($link) {
         echo '<a class="'.$classes.'" href="'.$link['url'].'" target="'.$link['target'].'">'.$link['title'].'</a>';
+    }
+}
+*/
+
+/* Trim video share links down to video IDs and other pertinent information */
+function fount_yt_share_stripper($youtube_url) {
+    // Match the video ID from the URL
+    $pattern = '/youtu\.be\/([a-zA-Z0-9_-]{11})/';
+    preg_match($pattern, $youtube_url, $matches);
+
+    // Check if a match was found
+    if (isset($matches[1])) {
+        return $matches[1]; // Return the video ID
+    } else {
+        return false; // Return false if no match was found
+    }
+}
+
+function fount_vimeo_share_stripper($vimeo_url) {
+    // Match the video ID and share ID from the URL
+    $pattern = '/vimeo\.com\/(?:\/)?(\d+)(?:\/([^\/\?]+))?/';
+    preg_match($pattern, $vimeo_url, $matches);
+
+    // Check if a match was found
+    if (isset($matches[1])) {
+        $video_id = $matches[1];
+        $share_id = isset($matches[2]) ? $matches[2] : ''; // Check if share ID exists, set to empty string if not
+        return array($video_id, $share_id); // Return both IDs
+    } else {
+        return false; // Return false if no match was found
+    }
+}
+
+function fount_generate_vimeo_embed_code($vimeo_url) {
+    // Extract video ID and share ID
+    $info = fount_vimeo_share_stripper($vimeo_url);
+    if ($info !== false) {
+        list($video_id, $share_id) = $info;
+
+        // Construct iframe src attribute
+        $src = "https://player.vimeo.com/video/$video_id";
+        if (!empty($share_id)) {
+            $src .= "?h=$share_id";
+        }
+
+        // Construct and return the iframe code
+        return '<iframe src="' . htmlspecialchars($src) . '" frameborder="0" allow="fullscreen"></iframe>';
+    } else {
+        return "Invalid Vimeo URL.";
     }
 }
 

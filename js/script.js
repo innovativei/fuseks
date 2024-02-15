@@ -2,6 +2,7 @@
     $(document).ready(function() {
 
         allSliders();
+        //sliderVideoControl();
         mobileNav();
 
         //smoothScroll();
@@ -55,9 +56,11 @@
         var allSliders = $('.slider-hand-arrows');
 
         $(allSliders).each(function() {
-            var prevArrow   = $(this).siblings('.hand-arrows').children('.arrow.prev'),
-                nextArrow   = $(this).siblings('.hand-arrows').children('.arrow.next'),
-                appendDots  = $(this).siblings('.slider-dots');
+            var prevArrow       = $(this).siblings('.hand-arrows').children('.arrow.prev'),
+                nextArrow       = $(this).siblings('.hand-arrows').children('.arrow.next'),
+                appendDots      = $(this).siblings('.mobile-controls').children('.slider-dots'),
+                prevArrowMobile = $(this).siblings('.mobile-controls').children('.arrow-sm.prev'),
+                nextArrowMobile = $(this).siblings('.mobile-controls').children('.arrow-sm.next');
 
             if ($(this).data('autoplay')) {
                 var autoplay = true;
@@ -116,11 +119,24 @@
                         settings: {
                             dots: true,
                             appendDots: appendDots,
+                            prevArrow: prevArrowMobile,
+                            nextArrow: nextArrowMobile
                         }
                     }
                 ]
             });
         });
+
+            // Pause slider when any video starts playing
+            $('.slider-hand-arrows').on('play', 'video', function() {
+                $('.slider-hand-arrows').slick('slickPause');
+            });
+        
+            // Resume slider when a video ends or is paused
+            $('.slider-hand-arrows').on('ended pause', 'video', function() {
+                $('.slider-hand-arrows').slick('slickPlay');
+            });
+        
     }
 
     /*

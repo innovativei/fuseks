@@ -139,7 +139,11 @@ get_header(); ?>
                     <div class="arrow prev"></div>
                     <div class="arrow next"></div>
                 </div>
-                <div class="slider-dots d-block d-lg-none"></div>
+                <div class="mobile-controls d-flex justify-content-center align-items-center d-lg-none">
+                    <div class="arrow-sm prev"></div>
+                    <div class="slider-dots"></div>
+                    <div class="arrow-sm next"></div>
+                </div>
             </div>
             <div class="slider-wrapper d-block d-md-none">
                 <div 
@@ -244,7 +248,11 @@ get_header(); ?>
                         </a>
                     </div>
                 </div>
-                <div class="slider-dots d-block d-lg-none"></div>
+                <div class="mobile-controls d-flex justify-content-center align-items-center d-lg-none">
+                    <div class="arrow-sm prev"></div>
+                    <div class="slider-dots"></div>
+                    <div class="arrow-sm next"></div>
+                </div>
             </div>
             <div class="buttons mb-0 text-center">
                 <a href="#" target="_blank" class="button mb-0">View All Brands</a>
@@ -269,7 +277,9 @@ get_header(); ?>
                     <div class="corner tr"></div>
                     <div class="corner bl"></div>
                     <div class="corner br"></div>
-                    <div class="slider-hand-arrows drop-shadow white-frame">
+                    <div class="slider-hand-arrows drop-shadow white-frame"
+                        data-autoplay="true"
+                    >
                         <div class="linked-image">
                             <a href="#" target="_blank" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/fpo/bargain-1.jpg);"></a>
                         </div>
@@ -284,7 +294,11 @@ get_header(); ?>
                         <div class="arrow prev"></div>
                         <div class="arrow next"></div>
                     </div>
-                    <div class="slider-dots d-block d-lg-none"></div>
+                    <div class="mobile-controls d-flex justify-content-center align-items-center d-lg-none">
+                        <div class="arrow-sm prev"></div>
+                        <div class="slider-dots"></div>
+                        <div class="arrow-sm next"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -363,7 +377,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php include(get_stylesheet_directory() . '/parts/testimonial-slider.php'); ?>
+    <?php include(get_stylesheet_directory() . '/parts/testimonials.php'); ?>
 </div>
 
 <?php get_footer(); ?>

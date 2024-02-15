@@ -68,6 +68,8 @@
                 "id": ""
             },
             "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
             "sub_fields": [
                 {
                     "key": "field_65bd61e7592b4",
@@ -84,6 +86,7 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "acfe_textarea_code": 0,
                     "maxlength": "",
                     "rows": 4,
                     "placeholder": "",
@@ -129,16 +132,19 @@
                     "prepend": "",
                     "append": ""
                 }
-            ]
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         },
         {
-            "key": "field_65c6511c1775a",
-            "label": "Video Testimonial Type",
-            "name": "video_testimonial_type",
+            "key": "field_65cbfb9a5d48a",
+            "label": "Video Testimonial",
+            "name": "video_testimonial",
             "aria-label": "",
-            "type": "radio",
+            "type": "group",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": [
                 [
                     {
@@ -153,16 +159,297 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "youtube": "YouTube",
-                "vimeo": "Vimeo"
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_65c6511c1775a",
+                    "label": "Video Testimonial Type",
+                    "name": "video_testimonial_type",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "youtube": "YouTube",
+                        "vimeo": "Vimeo"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_65cb7ed316dbb",
+                    "label": "YouTube Video Share Link",
+                    "name": "youtube_video_share_link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "<strong>Note:<\/strong> This video must be in 16:9 aspect ratio to display correctly.<br \/><br \/>Click \"Share\" on the video page you want to share, then copy the link and paste it here. <strong>Do not use the \"Embed\" code.<\/strong>",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c6511c1775a",
+                                "operator": "==",
+                                "value": "youtube"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "https:\/\/youtu.be\/dQw4w9WgXcQ?si=ZddLU_CiGGq2gwPs",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65cb805b16dbc",
+                    "label": "Vimeo Video Share Link",
+                    "name": "vimeo_video_share_link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "<strong>Note:<\/strong> This video must be in 16:9 aspect ratio to display correctly.<br \/><br \/>Click \"Share\" on the video page you want to share, then copy the link and paste it here. <strong>Do not use the \"Embed\" code.<\/strong>",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c6511c1775a",
+                                "operator": "==",
+                                "value": "vimeo"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "https:\/\/vimeo.com\/788358920\/9239290471?share=copy",
+                    "prepend": "",
+                    "append": ""
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_65cbd629a120b",
+            "label": "Display Pages",
+            "name": "display_pages",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Except where noted, all testimonials marked for a page, location, or service will be randomized on each page load for that page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_65cc04544e198",
+                    "label": "Pages",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_65cbfe7ef844d",
+                    "label": "Home Page",
+                    "name": "home_toggle",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable",
+                    "ui": 1
+                },
+                {
+                    "key": "field_65cc04d14e19c",
+                    "label": "About Page",
+                    "name": "about_toggle",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable",
+                    "ui": 1
+                },
+                {
+                    "key": "field_65cc04984e19b",
+                    "label": "Note",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65cc04d14e19c",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "All Testimonials added to the About Page will go into a slider.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_65cc04754e199",
+                    "label": "Locations",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_65cc05be4e19d",
+                    "label": "Locations",
+                    "name": "locations_rel",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "locations"
+                    ],
+                    "post_status": "",
+                    "taxonomy": "",
+                    "filters": "",
+                    "return_format": "id",
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "min": "",
+                    "max": "",
+                    "elements": "",
+                    "bidirectional": 0,
+                    "bidirectional_target": []
+                },
+                {
+                    "key": "field_65cc04764e19a",
+                    "label": "Services",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_65cc05da4e19e",
+                    "label": "Services",
+                    "name": "services_rel",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "services"
+                    ],
+                    "post_status": "",
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "return_format": "id",
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "min": "",
+                    "max": "",
+                    "elements": "",
+                    "bidirectional": 0,
+                    "bidirectional_target": []
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         }
     ],
     "location": [
@@ -170,7 +457,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "testimonial"
+                "value": "testimonials"
             }
         ]
     ],
@@ -198,5 +485,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707496060
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1708010476
 }

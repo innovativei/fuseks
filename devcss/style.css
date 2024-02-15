@@ -4287,7 +4287,7 @@ a:hover,
 input[type=submit],
 input[type=submit]:hover,
 .transition,
-.slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button::before,
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li button::before,
 form .select .select-options li,
 form .select .select-styled::before,
 form .select .select-styled,
@@ -4308,7 +4308,7 @@ nav.secondary ul li.dropdown .dropdown-wrapper .arrow,
 nav.primary ul li.dropdown .dropdown-wrapper,
 nav.secondary ul li.dropdown .dropdown-wrapper,
 .transition:hover,
-.slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button:hover::before {
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li button:hover::before {
   transition: all 0.3s ease;
 }
 
@@ -4352,7 +4352,7 @@ nav.secondary ul li.dropdown .dropdown-wrapper,
   height: 100%;
 }
 
-.bna, .slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button::before, .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide.content::before, .slider-wrapper .corner::before, .slider-wrapper .corner::after, #mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return::before, #mobile-menu nav ul li.flyout::before, nav.primary #mobile-menu-trigger .bars::before, nav.primary #mobile-menu-trigger .bars::after, nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before, .inset-shadow::after {
+.bna, .slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li button::before, .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide.content::before, .slider-wrapper .corner::before, .slider-wrapper .corner::after, #mobile-menu nav ul li.flyout .flyout-wrapper .flyout-return::before, #mobile-menu nav ul li.flyout::before, nav.primary #mobile-menu-trigger .bars::before, nav.primary #mobile-menu-trigger .bars::after, nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before, .inset-shadow::after {
   content: "";
   position: absolute;
   display: block;
@@ -4971,19 +4971,37 @@ nav.secondary ul.social li + li::before {
     border-width: 10px;
   }
 }
-#testimonial .slick-list .slick-track {
+#testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track {
   display: flex;
 }
-#testimonial .slick-list .slick-track .slick-slide {
+#testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: auto;
+  aspect-ratio: auto;
 }
-#testimonial .slick-list .slick-track .slick-slide span {
+#testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide span {
   opacity: 0;
 }
+#testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .drop-shadow, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.primary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .arrow::before, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .arrow::before, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.primary ul li.dropdown .dropdown-wrapper .links, nav.primary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .links, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.secondary ul li.dropdown .dropdown-wrapper .links, nav.secondary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .links {
+  margin: 30px;
+}
+#testimonial .slider-wrapper .slider-hand-arrows + .hand-arrows .arrow.prev {
+  left: -50px;
+}
+#testimonial .slider-wrapper .slider-hand-arrows + .hand-arrows .arrow.next {
+  right: -50px;
+}
 
+@media (max-width: 1199.98px) {
+  #testimonial .slider-wrapper .slider-hand-arrows + .hand-arrows .arrow.prev {
+    left: -30px;
+  }
+  #testimonial .slider-wrapper .slider-hand-arrows + .hand-arrows .arrow.next {
+    right: -30px;
+  }
+}
 footer {
   padding: 80px 0 30px;
 }
@@ -5369,13 +5387,25 @@ form .select .select-options li.hide {
   right: -80px;
   transform: scaleX(-1);
 }
-.slider-wrapper .slider-hand-arrows ~ .slider-dots {
-  position: absolute;
-  width: 100%;
-  text-align: center;
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .arrow-sm {
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+  width: 15px;
+  height: 26px;
+}
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .arrow-sm.prev {
+  margin-right: 15px;
+  transform: scaleX(-1);
+}
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .arrow-sm.next {
+  margin-left: 15px;
+}
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots {
   font-size: 0;
 }
-.slider-wrapper .slider-hand-arrows ~ .slider-dots ul {
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul {
   list-style-type: none;
   height: 24px;
   background-color: #231f20;
@@ -5384,22 +5414,22 @@ form .select .select-options li.hide {
   display: inline-block;
   padding: 0 5px;
 }
-.slider-wrapper .slider-hand-arrows ~ .slider-dots ul li {
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li {
   display: inline-block;
   width: 24px;
   height: 24px;
 }
-.slider-wrapper .slider-hand-arrows ~ .slider-dots ul li.slick-active button::before {
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li.slick-active button::before {
   background-color: #8d9f80;
 }
-.slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button {
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li button {
   display: block;
   width: 24px;
   height: 24px;
   line-height: 24px;
   position: relative;
 }
-.slider-wrapper .slider-hand-arrows ~ .slider-dots ul li button::before {
+.slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li button::before {
   width: 10px;
   height: 10px;
   background-color: #F6ECD8;
@@ -5423,8 +5453,8 @@ form .select .select-options li.hide {
     height: 15px;
   }
   .slider-wrapper .corner::before, .slider-wrapper .corner::after {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
   }
   .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide.content .slide-content.header {
     font-size: 60px;

@@ -6,14 +6,9 @@ get_header();
 
 ?>
 
-<div id="about">
-
+<div id="service">
     <?php include(get_stylesheet_directory() . '/parts/hero.php'); ?>
-
     <?php include(get_stylesheet_directory() . '/parts/testimonials.php'); ?>
-
-
-
 </div>
 
 <?php get_footer(); ?>

@@ -185,48 +185,66 @@
             }
         }
 
-        ~.slider-dots {
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            font-size: 0;
+        ~.mobile-controls {
+            .arrow-sm {
+                background-image: url('../img/arrow.png');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position-y: center;
+                width: 15px;
+                height: 26px;
 
-            ul {
-                list-style-type: none;
-                height: 24px;
-                background-color: $off-black;
-                border-radius: 12px;
-                margin: 0;
-                display: inline-block;
-                padding: 0 5px;
+                &.prev {
+                    margin-right: 15px;
+                    transform: scaleX(-1);
+                }
 
-                li {
-                    display: inline-block;
-                    width: 24px;
+                &.next {
+                    margin-left: 15px;
+
+                }
+            }
+
+            .slider-dots {
+                font-size: 0;
+
+                ul {
+                    list-style-type: none;
                     height: 24px;
+                    background-color: $off-black;
+                    border-radius: 12px;
+                    margin: 0;
+                    display: inline-block;
+                    padding: 0 5px;
 
-                    &.slick-active {
-                        button {
-                            &::before {
-                                background-color: $green;
-                            }
-                        }
-                    }
-
-                    button {
-                        display: block;
+                    li {
+                        display: inline-block;
                         width: 24px;
                         height: 24px;
-                        line-height: 24px;
-                        position: relative;
 
-                        &::before {
-                            @extend .bna, .transition;
-                            width: 10px;
-                            height: 10px;
-                            background-color: $cream;
-                            border-radius: 5px;
-                            inset: 7px;
+                        &.slick-active {
+                            button {
+                                &::before {
+                                    background-color: $green;
+                                }
+                            }
+                        }
+
+                        button {
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            line-height: 24px;
+                            position: relative;
+
+                            &::before {
+                                @extend .bna, .transition;
+                                width: 10px;
+                                height: 10px;
+                                background-color: $cream;
+                                border-radius: 5px;
+                                inset: 7px;
+                            }
                         }
                     }
                 }
@@ -258,9 +276,8 @@
 
             &::before,
             &::after {
-                @extend .bna;
-                width: 15px;
-                height: 15px;
+                width: 14px;
+                height: 14px;
             }
         }
 
