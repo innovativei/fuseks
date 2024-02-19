@@ -7,83 +7,76 @@
         <img src="<?php bloginfo('template_directory'); ?>/img/fuseks-brand-wide.png" alt="" class="img-fluid">
     </div>
     <div class="container-lg">
-        <div class="row justify-content-center">
-            <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center">
-                <h2 class="white text-center mb-0">Fusek's True Value<br />Downtown</h2>
-                <p class="white text-center">350 East New York Street, Suite 100<br />Indianapolis, IN 46204</p>
-                <p class="white text-center"><strong>Phone:</strong><br />(317) 636-7377</p>
-                <p class="white text-center mb-0"><strong>Store Hours:</strong></p>
-                <table class="text-center mb-3 mb-md-0">
-                    <tr>
-                        <td>Sun</td>
-                        <td>10AM - 6PM</td>
-                    </tr>
-                    <tr>
-                        <td>Mon</td>
-                        <td>8AM - 8PM</td>
-                    </tr>
-                    <tr>
-                        <td>Tue</td>
-                        <td>8AM - 8PM</td>
-                    </tr>
-                    <tr>
-                        <td>Wed</td>
-                        <td>8AM - 8PM</td>
-                    </tr>
-                    <tr>
-                        <td>Thu</td>
-                        <td>8AM - 8PM</td>
-                    </tr>
-                    <tr>
-                        <td>Fri</td>
-                        <td>8AM - 8PM</td>
-                    </tr>
-                    <tr>
-                        <td>Sat</td>
-                        <td>8AM - 8PM</td>
-                    </tr>
-                </table>
+        <?php
+        $location_args = array(
+            'post_type' => 'locations',
+            'posts_per_page' => -1,
+            'orderby' => 'menu_order title',
+            'order' => 'ASC',
+        );
+
+        $location_query = new WP_Query($location_args);
+
+        if($location_query->have_posts()):
+            ?>
+            <div class="row justify-content-center">
+                <?php
+                while($location_query->have_posts()):
+                    $location_query->the_post();
+                    ?>
+                    <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center">
+                        <h2 class="white text-center mb-0">
+                            Fusek's True Value<br />
+                            <?php the_title(); ?>
+                        </h2>
+                        <?php
+                        if(get_field('address')):
+                            ?>
+                            <p class="white text-center"><?php the_field('address'); ?></p>
+                            <?php
+                        endif;
+                        if(get_field('phone')):
+                            ?>
+                            <p class="white text-center">
+                                <strong>Phone:</strong>
+                                <br />
+                                <?php the_field('phone'); ?>
+                            </p>
+                            <?php
+                        endif;
+                        if(get_field('hours')):
+                            ?>
+                            <p class="white text-center mb-0">
+                                <strong>Store Hours:</strong>
+                            </p>
+                            <table class="text-center mb-3 mb-md-0">
+                                <?php
+                                while(have_rows('hours')):
+                                    the_row();
+                                    ?>
+                                    <tr>
+                                        <td><?php the_sub_field('day'); ?></td>
+                                        <td><?php the_sub_field('open_hours'); ?></td>
+                                    </tr>
+                                    <?php
+                                endwhile;
+                                ?>
+                            </table>
+                            <?php
+                        endif;
+                        ?>
+                    </div>
+                    <?php
+                endwhile;
+                wp_reset_postdata();
+                ?>
             </div>
-            <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center">
-                <h2 class="white text-center mb-0">Fusek's True Value<br />East</h2>
-                <p class="white text-center">9501 East Washington Street<br />Indianapolis, IN 46229</p>
-                <p class="white text-center"><strong>Phone:</strong><br />(317) 636-7377</p>
-                <p class="white text-center mb-0"><strong>Store Hours:</strong></p>
-                <table class="text-center mb-0">
-                    <tr>
-                        <td>Sun</td>
-                        <td>11AM - 6PM</td>
-                    </tr>
-                    <tr>
-                        <td>Mon</td>
-                        <td>8AM - 7PM</td>
-                    </tr>
-                    <tr>
-                        <td>Tue</td>
-                        <td>8AM - 7PM</td>
-                    </tr>
-                    <tr>
-                        <td>Wed</td>
-                        <td>8AM - 7PM</td>
-                    </tr>
-                    <tr>
-                        <td>Thu</td>
-                        <td>8AM - 7PM</td>
-                    </tr>
-                    <tr>
-                        <td>Fri</td>
-                        <td>8AM - 7PM</td>
-                    </tr>
-                    <tr>
-                        <td>Sat</td>
-                        <td>8AM - 7PM</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+            <?php
+        endif;
+        ?>
     </div>
     <div class="jobs d-flex justify-content-center py-3 mt-3">
-        <a href="#" class="d-flex align-items-center">
+        <a href="/careers" class="d-flex align-items-center">
             <img src="<?php bloginfo('template_directory'); ?>/img/brush-in-hand.png" class="img-fluid d-inline-block">
             <h3 class="white text-uppercase d-inline-block mb-0">Join Our Team</h3>
         </a>

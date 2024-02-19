@@ -186,6 +186,10 @@
         }
 
         ~.mobile-controls {
+            height: 26px;
+            position: absolute;
+            width: 100%;
+
             .arrow-sm {
                 background-image: url('../img/arrow.png');
                 background-repeat: no-repeat;
@@ -193,6 +197,7 @@
                 background-position-y: center;
                 width: 15px;
                 height: 26px;
+                cursor: pointer;
 
                 &.prev {
                     margin-right: 15px;

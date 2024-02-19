@@ -63,21 +63,7 @@
         background-repeat: no-repeat;
         background-size: 460px;
         background-position: 20% center;
-
-        >.icons {
-            position: absolute;
-            width: 100%;
-            bottom: -67px;
-
-            .icon {
-                aspect-ratio: 1 / 1;
-                width: 150px;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                margin: 0 10px;
-            }
-        }
+        border-bottom: 0;
     }
 }
 
@@ -95,14 +81,6 @@
 
         #about {
             padding-bottom: 100px;
-
-            >.icons {
-                bottom: -59px;
-
-                .icon {
-                    width: 130px;
-                }
-            }
         }
     }
 }
@@ -142,14 +120,6 @@
 
         #about {
             padding-bottom: 70px;
-
-            >.icons {
-                bottom: -44px;
-
-                .icon {
-                    width: 90px;
-                }
-            }
         }
     }
 }

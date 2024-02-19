@@ -123,10 +123,12 @@ input[type="submit"]:hover,
 }
 
 $bg-color:
-    ('cream', $cream),
-    ('white', $white),
-    ('green', $green),
-    ('black', $black);
+    ('cream',       $cream),
+    ('white',       $white),
+    ('green',       $green),
+    ('dark-green',  $dark-green),
+    ('light-green', $light-green),
+    ('black',       $black);
 
 @each $class, $color in $bg-color {
     .bg-#{$class} {
@@ -138,6 +140,11 @@ $bg-color:
     margin: 0 auto;
     max-width: 1110px;
     padding: 0 65px;
+}
+
+.acf-map {
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 @include media-breakpoint-down(lg) {

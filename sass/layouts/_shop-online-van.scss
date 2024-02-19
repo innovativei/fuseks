@@ -1,0 +1,93 @@
+#shop-online-van {
+    border-top: 8px solid rgba($black, 1);
+    position: relative;
+    padding-top: 228px;
+
+    .van {
+        position: absolute;
+        width: 522px;
+        height: 298px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: -85px;
+    }
+
+    h2 {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .buttons {
+        .button {
+            font-size: 24px;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    #shop-online-van {
+        padding-top: 170px;
+
+        .van {
+            width: 392px;
+            height: 224px;
+            top: -70px;
+        }
+
+        h2 {
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        .buttons {
+            .button {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #shop-online-van {
+        padding-top: 120px;
+
+        .van {
+            width: 261px;
+            height: 149px;
+            top: -45px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .buttons {
+            .button {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #shop-online-van {
+        h2 {
+            font-size: 32px;
+        }
+    }
+}

@@ -1,4 +1,26 @@
 #testimonial {
+    position: relative;
+    border-top: 8px solid $black;
+
+    >.icons {
+        position: absolute;
+        width: 100%;
+        top: -91px;
+
+        .icon {
+            aspect-ratio: 1 / 1;
+            width: 150px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 10px;
+        }
+    }
+
+    span {
+        opacity: 0;
+    }
+
     .slider-wrapper {
         .slider-hand-arrows {
             .slick-list {
@@ -11,10 +33,6 @@
                         justify-content: center;
                         height: auto;
                         aspect-ratio: auto;
-
-                        span {
-                            opacity: 0;
-                        }
 
                         .drop-shadow {
                             margin: 30px;
@@ -40,6 +58,14 @@
 
 @include media-breakpoint-down(lg) {
     #testimonial {
+        >.icons {
+            top: -79px;
+
+            .icon {
+                width: 130px;
+            }
+        }
+
         .slider-wrapper {
             .slider-hand-arrows {
                 + .hand-arrows {
@@ -53,6 +79,20 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #testimonial {
+        padding-bottom: 70px;
+
+        >.icons {
+            top: -54px;
+
+            .icon {
+                width: 90px;
             }
         }
     }

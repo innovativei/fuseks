@@ -4,9 +4,64 @@
         allSliders();
         //sliderVideoControl();
         mobileNav();
+        brandFilter();
+
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('#all-brands #filter-dropdown.open').length) {
+                //console.log('Click occurred outside of #myElement');
+                $('#all-brands #filter-dropdown').removeClass('open').children('.options').slideUp();
+            }
+        });
 
         //smoothScroll();
     });
+
+    function brandFilter() {
+        var filterDropdown      = $('#all-brands #filter-dropdown'),
+            filterPlaceholder   = $('#all-brands #filter-dropdown .placeholder'),
+            filterOption        = $('#all-brands #filter-dropdown .options .location'),
+            resetFilter         = $('#all-brands #filter-dropdown .reset'),
+            allBrands           = $('#brand-hopper .brand');
+
+        $(filterDropdown).click(function() {
+            $(this).toggleClass('open').children('.options').slideToggle();
+        });
+
+        $(filterOption).click(function() {
+            $(this).addClass('selected');
+            var locationID      = $(this).data('filter-arg'),
+                locationName    = $(this).text();
+
+
+            $(filterPlaceholder).text(locationName);
+
+
+            //console.log('Filter by Location ID: ' + locationID);
+
+            $(allBrands).each(function() {
+                $(this).addClass('d-none');
+                var brandLocs       = $(this).data('locs');
+                var brandLocs       = brandLocs + '';
+                var brandLocArray   = brandLocs.split('|');
+
+                for (let i = 0; i < brandLocArray.length; i++) {
+                    if (brandLocArray[i] == locationID) {
+                        $(this).removeClass('d-none');
+                    }
+                }
+            });
+
+        });
+
+        
+
+            $(resetFilter).click(function() {
+                $(allBrands).removeClass('d-none');
+                $(filterPlaceholder).text('Filter By Store');
+            });
+
+
+    }
 
     function mobileNav() {
         var trigger = $('#mobile-menu-trigger'),

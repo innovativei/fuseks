@@ -1,4 +1,4 @@
-.hero {
+#hero {
     #home-hero-slider {
         border: 20px solid $white;
         z-index: 1;
@@ -7,37 +7,110 @@
         +.hand-arrows {
             z-index: 3;
             position: absolute;
-
-            /*
-            .slick-slide {
-                aspect-ratio: 16 / 9;
-            }
-            */
         }
+    }
+
+    h1 {
+        &.massive {
+            font-size: 105px;
+        }
+    }
+
+    &.shade {
+        position: relative;
+
+        &::before {
+            @extend .bna;
+            inset: 0;
+            background-color: rgba($black, .3);
+        }
+
+        h1 {
+            text-shadow: 0 0 6px $black;
+            z-index: 1;
+        }
+    }
+
+    &.location,
+    &.service,
+    &.brand {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top: 8px solid $black;
+    }
+
+    &.location {
+        height: 550px;
+    }
+
+    &.service,
+    &.brand {
+        height: 350px;
     }
 }
 
 @include media-breakpoint-down(lg) {
-    .hero {
+    #hero {
         #home-hero-slider {
             border-width: 15px;
+        }
+
+        h1 {
+            &.massive {
+                font-size: 90px;
+            }
+        }
+
+        &.location {
+            height: 400px;
         }
     }
 }
 
 @include media-breakpoint-down(md) {
-    .hero {
+    #hero {
         #home-hero-slider {
             margin-bottom: 15px;
+        }
+
+        h1 {
+            &.massive {
+                font-size: 70px;
+            }
+        }
+
+        &.location {
+            height: 300px;
+        }
+
+        &.service,
+        &.brand {
+            height: 300px;
         }
     }
 }
 
 @include media-breakpoint-down(sm) {
-    .hero {
+    #hero {
         #home-hero-slider {
             border-width: 10px;
         }
-    }
 
+        h1 {
+            &.massive {
+                font-size: 60px;
+                line-height: 1.1;
+            }
+        }
+
+        &.location {
+            height: 220px;
+        }
+
+        &.service,
+        &.brand {
+            height: 200px;
+        }
+    }
 }

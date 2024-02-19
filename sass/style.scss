@@ -28,6 +28,7 @@
 @import 'layouts/navigation';
 @import 'layouts/hero';
 @import 'layouts/testimonials';
+@import 'layouts/shop-online-van';
 @import 'layouts/footer';
 
 /** Components **/
@@ -38,3 +39,6 @@
 
 /** Pages **/
 @import 'pages/home';
+@import 'pages/location';
+@import 'pages/all-brands';
+@import 'pages/brand';

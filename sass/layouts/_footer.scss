@@ -12,11 +12,10 @@ footer {
     }
 
     table {
-        @extend p;
-        color: $white;
         margin: 0 -6px;
 
         td {
+            color: $white;
             padding: 1px 6px;
         }
     }

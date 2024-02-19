@@ -1,0 +1,133 @@
+#all-brands {
+    .featured-brand {
+        h3 {
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+
+        p {
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    #brand-filter-bar {
+        border-top: 8px solid rgba($black, 1);
+        border-bottom: 8px solid rgba($black, 1);
+
+        #filter-dropdown {
+            margin-left: 30px;
+            background-color: $light-green;
+            color: $black;
+            display: inline-block;
+            position: relative;
+            height: 42px;
+            width: 200px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.open {
+                i {
+                    transform: scaleY(-1);
+                    top: 13px;
+                }
+            }
+
+            i {
+                @extend .transition;
+                position: absolute;
+                top: 4px;
+                right: 0;
+                width: 30px;
+                font-size: 24px;
+                z-index: 1;
+                text-align: left;
+            }
+
+            .placeholder {
+                @extend .no-select, .transition;
+                padding: 0 50px 0 20px;
+                line-height: 42px;
+                font-size: 20px;
+            }
+
+            .options {
+                @extend .no-select;
+                background-color: $light-green;
+                position: relative;
+                z-index: 1;
+                display: none;
+
+                .location {
+                    @extend .transition;
+                    padding: 0 50px 0 20px;
+                    line-height: 42px;
+                    font-size: 20px;
+
+                    &:hover {
+                        background-color: $green;
+                        color: $cream;
+                    }
+
+                    &.reset {
+                        border-top: 2px solid rgba($black, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    #brand-hopper {
+        .brand {
+            aspect-ratio: 1 / 1;
+
+            a {
+                height: calc(100% - 30px);
+
+                &:hover {
+                    img {
+                        transform: scale(1);
+                    }
+                }
+
+                img {
+                    @extend .transition;
+                    transform: scale(.9);
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    #all-brands {
+        #brand-filter-bar {
+            #filter-dropdown {
+                margin-left: 0;
+                display: block;
+            }
+        }
+
+        #brand-hopper {
+            .brand {
+                aspect-ratio: auto;
+
+                a {
+                    height: auto;
+                }
+            }
+        }
+    }
+}

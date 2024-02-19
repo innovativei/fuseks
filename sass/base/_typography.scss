@@ -36,13 +36,16 @@ h3 {
     font-size: 24px;
 }
 
-p {
+p,
+td,
+li {
     font-family: $body-font;
     font-size: 18px;
     line-height: 24px;
     font-weight: 300;
     margin-bottom: 30px;
     line-height: 1.4;
+    color: $black;
 
     $text-color:
     ("white",       $white),
@@ -52,8 +55,21 @@ p {
     @each $class, $color in $text-color {
         &.#{$class} {
             color: $color;
+
+            a {
+                color: $color;
+
+                &:hover {
+                    color: $color;
+                }
+            }
         }
     }
+}
+
+td,
+li {
+    margin-bottom: 0;
 }
 
 @include media-breakpoint-down(lg) {
@@ -69,7 +85,9 @@ p {
         font-size: 20px;
     }
 
-    p {
+    p,
+    td,
+    li {
         font-size: 16px;
     }
 }

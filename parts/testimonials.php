@@ -185,7 +185,12 @@ $slider_append  = '') {
 }
 ?>
 
-<section id="testimonial" class="py-xl-5 py-md-4 py-5">
+<section id="testimonial" class="py-5">
+    <div class="icons d-flex justify-content-center">
+        <div class="icon" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/icon-brush.png);"></div>
+        <div class="icon" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/icon-plug.png)";></div>
+        <div class="icon" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/icon-wrench.png);"></div>
+    </div>
     <div class="container">
         <?php
         // Is this the About template? If so, build slider
@@ -270,10 +275,14 @@ $slider_append  = '') {
                         $possible_locations = array_values($possible_locations);
                         shuffle($possible_locations);
 
-                        // Grab the first one and display it.
-                        $selected_testimonial = $possible_locations[0];
-                        test_and_construct_single_testimonial($selected_testimonial, $is_slider);
-
+                        // Grab the first one and display it, if it exists.
+                        if(array_key_exists(0, $possible_locations)) {
+                            $selected_testimonial = $possible_locations[0];
+                            test_and_construct_single_testimonial($selected_testimonial, $is_slider);
+                        } else {
+                            // If all else fails, give the section some elbow room
+                            echo('<div class="my-5"></div>');
+                        }
                     } elseif ($post_type === 'services') {
 
                         // Clone array and set up array for only the current Survice
@@ -298,9 +307,16 @@ $slider_append  = '') {
                         shuffle($possible_services);
 
                         // Grab the first one and display it.
-                        $selected_testimonial = $possible_services[0];
-                        test_and_construct_single_testimonial($selected_testimonial, $is_slider);
-
+                        if(array_key_exists(0, $possible_services)) {
+                            $selected_testimonial = $possible_services[0];
+                            test_and_construct_single_testimonial($selected_testimonial, $is_slider);
+                        } else {
+                            // If all else fails, give the section some elbow room
+                            echo('<div class="my-5"></div>');
+                        }
+                    } else {
+                        // If all else fails, give the section some elbow room
+                        echo('<div class="my-5"></div>');
                     }
                 }
 

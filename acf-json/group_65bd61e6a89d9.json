@@ -1,6 +1,6 @@
 {
     "key": "group_65bd61e6a89d9",
-    "title": "Testimonial - CPT",
+    "title": "CPT - Testimonial",
     "fields": [
         {
             "key": "field_65bd6508aa483",
@@ -492,5 +492,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708010476
+    "modified": 1708192225
 }

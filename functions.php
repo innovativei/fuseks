@@ -19,6 +19,7 @@ function fount_load_scripts() {
 
     wp_enqueue_script('scripts', get_stylesheet_directory_uri().'/js/script.js', false, null);
     wp_enqueue_script('icons', 'https://kit.fontawesome.com/e4c9cbfaf8.js', false, null);
+    wp_enqueue_script('acf_google_map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAfEiU2u8YqFdGTJckl-RVE0lEh6i0CDp8&callback=Function.prototype', false, null);
     wp_enqueue_style('fonts', '//fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Slab:wght@700;900&family=Roboto:wght@300;400;700&display=swap', array(), null);
 
     //if(ENVIRONMENT == "development") {
@@ -26,7 +27,6 @@ function fount_load_scripts() {
     //} else {
         //wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.css', array(), false, 'all');
     //}
-
     if ( is_singular('post') ) { 
       wp_enqueue_script( 'comment-reply' ); 
     }
@@ -167,6 +167,14 @@ function fount_generate_vimeo_embed_code($vimeo_url) {
         return "Invalid Vimeo URL.";
     }
 }
+
+// Google Maps API Key
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyAfEiU2u8YqFdGTJckl-RVE0lEh6i0CDp8';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 
 /** Makes sure back end JS & CSS load. */
 define('CONCATENATE_SCRIPTS', false);
