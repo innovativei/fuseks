@@ -55,6 +55,21 @@
                 justify-content: center;
                 align-items: center;
                 padding: 15px;
+
+                // Fallback
+                @supports not (aspect-ratio: 1 / 1) {
+                    &::before {
+                        float: left;
+                        padding-top: 100%;
+                        content: "";
+                    }
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        clear: both;
+                    }
+                }
             }
         }
     }

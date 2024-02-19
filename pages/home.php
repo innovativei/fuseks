@@ -43,7 +43,11 @@ get_header(); ?>
             $brand_query->the_post();
 
             $brand_hopper[$i]['brand_name'] = get_field('brand_name');
-            $brand_hopper[$i]['logo']       = get_field('logo');
+            if(get_field('logo_type') == 'image') {
+                $brand_hopper[$i]['logo'] = get_field('logo');
+            }elseif(get_field('logo_type') == 'link'){
+                $brand_hopper[$i]['logo'] = get_field('logo_link');
+            }
             $brand_hopper[$i]['permalink']  = get_permalink();
             $i++;
         endwhile;

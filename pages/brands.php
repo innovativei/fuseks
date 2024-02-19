@@ -39,7 +39,6 @@ get_header();
             ?>
         </div>
     </section>
-    <?php include(get_stylesheet_directory() . '/parts/testimonials.php'); ?>
 </div>
 
 <?php get_footer(); ?>

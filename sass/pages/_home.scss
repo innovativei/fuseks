@@ -47,6 +47,21 @@
                 justify-content: center;
                 align-items: center;
                 padding: 15px;
+
+                // Fallback
+                @supports not (aspect-ratio: 1 / 1) {
+                    &::before {
+                        float: left;
+                        padding-top: 100%;
+                        content: "";
+                    }
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        clear: both;
+                    }
+                }
             }
         }
     }
@@ -54,6 +69,21 @@
     #bargain {
         .slider-hand-arrows {
             aspect-ratio: 16 / 9;
+
+            // Fallback
+            @supports not (aspect-ratio: 16 / 9) {
+                &::before {
+                    float: left;
+                    padding-top: 56.25%;
+                    content: "";
+                }
+
+                &::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+            }
         }
     }
 

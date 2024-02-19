@@ -23,6 +23,31 @@
             "append": ""
         },
         {
+            "key": "field_65d3aa03cdb94",
+            "label": "Logo Type",
+            "name": "logo_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "link": "Link",
+                "image": "Image"
+            },
+            "default_value": "image",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_65cf78daeb2c7",
             "label": "Logo",
             "name": "logo",
@@ -30,7 +55,15 @@
             "type": "image",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65d3aa03cdb94",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -48,6 +81,34 @@
             "mime_types": ".jpg, .jpeg, .png, .webp",
             "preview_size": "medium",
             "library": "all"
+        },
+        {
+            "key": "field_65d3aa57cdb95",
+            "label": "Logo Link",
+            "name": "logo_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65d3aa03cdb94",
+                        "operator": "==",
+                        "value": "link"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_65d38e681ffd4",
@@ -200,5 +261,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708363568
+    "modified": 1708371671
 }

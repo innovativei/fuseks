@@ -46,16 +46,18 @@
                                 $link_target    = $link['target'] ? $link['target'] : '_self';
                                 ?>
                                 <div class="content" style="background-image: url(<?php echo $bg; ?>);">
-                                    <div class="slide-content header">
-                                        <?php echo $header; ?>
-                                    </div>
-                                    <div class="slide-content copy">
-                                        <?php echo $text; ?>
-                                    </div>
-                                    <div class="buttons mb-0">
-                                        <a href="<?php echo esc_url($link_url); ?>" class="button mb-0" target="<?php echo esc_attr($link_target); ?>">
-                                            <?php echo esc_html($link_title); ?>
-                                        </a>
+                                    <div class="content-shade">
+                                        <div class="slide-content header">
+                                            <?php echo $header; ?>
+                                        </div>
+                                        <div class="slide-content copy">
+                                            <?php echo $text; ?>
+                                        </div>
+                                        <div class="buttons mb-0">
+                                            <a href="<?php echo esc_url($link_url); ?>" class="button mb-0" target="<?php echo esc_attr($link_target); ?>">
+                                                <?php echo esc_html($link_title); ?>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <?php

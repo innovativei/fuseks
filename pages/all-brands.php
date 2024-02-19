@@ -43,7 +43,11 @@ get_header();
                             foreach($featured_brand_id as $feat_brand):
                                 $featured_brand_info['name'] = get_the_title($feat_brand);
                                 $featured_brand_info['link'] = get_the_permalink($feat_brand);
-                                $featured_brand_info['logo'] = get_field('logo', $feat_brand);
+                                if(get_field('logo_type', $feat_brand) == 'image') {
+                                    $featured_brand_info['logo'] = get_field('logo', $feat_brand);
+                                }elseif(get_field('logo_type', $feat_brand) == 'link'){
+                                    $featured_brand_info['logo'] = get_field('logo_link', $feat_brand);
+                                }
                                 $featured_brand_info['locs'] = get_field('associated_locations', $feat_brand);
                             endforeach;
 
@@ -132,7 +136,11 @@ get_header();
 
             $brand_hopper[$i]['name']   = get_the_title();
             $brand_hopper[$i]['link']   = get_the_permalink();
-            $brand_hopper[$i]['logo']   = get_field('logo');
+            if(get_field('logo_type') == 'image') {
+                $brand_hopper[$i]['logo'] = get_field('logo');
+            }elseif(get_field('logo_type') == 'link'){
+                $brand_hopper[$i]['logo'] = get_field('logo_link');
+            }
             $brand_hopper[$i]['locs']   = get_field('associated_locations');
             $i++;
         endwhile;
@@ -151,7 +159,7 @@ get_header();
             endif;
         endforeach;
         ?>
-        <div class="col-lg-3 col-sm-4 mb-3 brand" data-locs="<?php echo $brand_locations; ?>">
+        <div class="col-6 col-sm-4 col-lg-3 mb-3 brand" data-locs="<?php echo $brand_locations; ?>">
             <a href="<?php echo $brand['link']; ?>" class="d-flex justify-content-center align-items-center w-100 p-2 p-sm-0">
                 <img src="<?php echo $brand['logo']; ?>" class="img-fluid" alt="<?php echo $brand['name']; ?>">
             </a>

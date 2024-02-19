@@ -2,5 +2,20 @@
     video {
         aspect-ratio: 16 / 9;
         width: 100%;
+
+        // Fallback
+        @supports not (aspect-ratio: 16 / 9) {
+            &::before {
+                float: left;
+                padding-top: 56.25%;
+                content: "";
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
     }
 }

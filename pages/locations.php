@@ -110,6 +110,11 @@ get_header();
                             ) {
                                 $brand_name = get_field('brand_name');
                                 $logo       = get_field('logo');
+                                if(get_field('logo_type') == 'image') {
+                                    $logo = get_field('logo');
+                                }elseif(get_field('logo_type') == 'link'){
+                                    $logo = get_field('logo_link');
+                                }
                                 $permalink  = get_permalink();
 
                                 $brand_hopper[$i] = array(

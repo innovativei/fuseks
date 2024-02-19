@@ -93,6 +93,21 @@
         .brand {
             aspect-ratio: 1 / 1;
 
+            // Fallback
+            @supports not (aspect-ratio: 1 / 1) {
+                &::before {
+                    float: left;
+                    padding-top: 100%;
+                    content: "";
+                }
+            
+                &::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+            }
+
             a {
                 height: calc(100% - 30px);
 
@@ -105,6 +120,7 @@
                 img {
                     @extend .transition;
                     transform: scale(.9);
+                    max-width: 80%;;
                 }
             }
         }
@@ -123,6 +139,12 @@
         #brand-hopper {
             .brand {
                 aspect-ratio: auto;
+
+                // Fallback
+                &::before,
+                &::after {
+                    display: none;
+                }
 
                 a {
                     height: auto;
