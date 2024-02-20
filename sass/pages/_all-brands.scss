@@ -135,21 +135,5 @@
                 display: block;
             }
         }
-
-        #brand-hopper {
-            .brand {
-                aspect-ratio: auto;
-
-                // Fallback
-                &::before,
-                &::after {
-                    display: none;
-                }
-
-                a {
-                    height: auto;
-                }
-            }
-        }
     }
 }

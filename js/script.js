@@ -13,7 +13,7 @@
             }
         });
 
-        //smoothScroll();
+        smoothScroll();
     });
 
     function brandFilter() {
@@ -194,8 +194,6 @@
         
     }
 
-    /*
-
     function smoothScroll() {
         $('a[href*="#"]')
             .not('[href="#"]')
@@ -223,6 +221,7 @@
         });
     }
 
+    /*
     function customSelect() {
         $('select').each(function(){
             var $this = $(this), numberOfOptions = $(this).children('option').length;

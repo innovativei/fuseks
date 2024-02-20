@@ -7,4 +7,5 @@ get_header(); ?>
 <div id="contact">
     <?php include(get_stylesheet_directory() . '/parts/hero.php'); ?>
 </div>
+
 <?php get_footer(); ?>

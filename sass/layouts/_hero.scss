@@ -33,7 +33,10 @@
 
     &.location,
     &.service,
-    &.brand {
+    &.brand,
+    &.careers,
+    &.about,
+    &.contact {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -45,7 +48,10 @@
     }
 
     &.service,
-    &.brand {
+    &.brand,
+    &.careers,
+    &.about,
+    &.contact {
         height: 350px;
     }
 }
@@ -85,7 +91,10 @@
         }
 
         &.service,
-        &.brand {
+        &.brand,
+        &.careers,
+        &.about,
+        &.contact {
             height: 300px;
         }
     }
@@ -109,7 +118,10 @@
         }
 
         &.service,
-        &.brand {
+        &.brand,
+        &.careers,
+        &.about,
+        &.contact {
             height: 200px;
         }
     }

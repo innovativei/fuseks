@@ -46,6 +46,12 @@ input[type="submit"]:hover,
 .transition:hover {
     transition: all 0.3s ease;
 }
+
+.transition-slow,
+.transition-slow:hover {
+    transition: all 0.6s ease;
+}
+
 .cf {
     *zoom: 1;
 

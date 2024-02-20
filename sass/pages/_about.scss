@@ -1,0 +1,29 @@
+#about {
+    .part {
+        background-repeat: no-repeat;
+
+        &.one {
+            border-top: 8px solid $black;
+            background-image: url(../img/wrench-man.png);
+            background-position-x: 10%;
+            background-position-y: 60%;
+        }
+
+        &.two {
+            background-image: url(../img/shop-vac.png);
+            background-position-x: 50%;
+            background-position-y: 0%;
+
+        }
+
+        &.three {
+            background-image: url(../img/hardware-sign.png);
+            background-position-x: 20%;
+            background-position-y: 100%;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+}
