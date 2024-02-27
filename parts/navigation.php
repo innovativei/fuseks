@@ -1,4 +1,14 @@
 <?php
+
+// Nav current page highlighter url finder
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+    $url = "https://";
+} else {
+    $url = "http://";
+}
+$url.= $_SERVER['HTTP_HOST'];
+$url.= $_SERVER['REQUEST_URI'];
+
 if(
     have_rows('sec_nav', 'option') || 
     have_rows('social_media', 'option')
@@ -28,7 +38,7 @@ if(
                             endif;
                             ?>
                             <li class="<?php echo $dd_class; ?>">
-                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="<?php if($url == $link_url){ echo 'highlight';} ?>">
                                     <?php echo esc_html($link_title); ?>
                                 </a>
                                 <div class="dropdown-wrapper">
@@ -44,7 +54,7 @@ if(
                                                     $dd_link_title  = $link['title'];
                                                     $dd_link_target = $link['target'] ? $link['target'] : '_self';
                                                     ?>
-                                                    <li>
+                                                    <li class="<?php if($url == $dd_link_url){ echo 'highlight';} ?>">
                                                         <a href="<?php echo esc_url($dd_link_url); ?>" target="<?php echo esc_attr($dd_link_target); ?>">
                                                             <?php echo esc_html($dd_link_title); ?>
                                                         </a>
@@ -125,8 +135,8 @@ if(
                                 $dd_class = "";
                             endif;
                             ?>
-                            <li class="<?php echo $dd_class; ?>">
-                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                            <li class="<?php echo $dd_class;?>">
+                                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="<?php if($url == $link_url){ echo 'highlight';} ?>">
                                     <?php echo esc_html($link_title); ?>
                                 </a>
                                 <div class="dropdown-wrapper">
@@ -142,7 +152,7 @@ if(
                                                     $dd_link_title  = $link['title'];
                                                     $dd_link_target = $link['target'] ? $link['target'] : '_self';
                                                     ?>
-                                                    <li>
+                                                    <li class="<?php if($url == $dd_link_url){ echo 'highlight';} ?>">
                                                         <a href="<?php echo esc_url($dd_link_url); ?>" target="<?php echo esc_attr($dd_link_target); ?>">
                                                             <?php echo esc_html($dd_link_title); ?>
                                                         </a>

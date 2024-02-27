@@ -73,24 +73,30 @@ get_header(); ?>
                         the_row();
                         $front  = get_sub_field('front');
                         $back   = get_sub_field('back');
-                        ?>
-                        <div class="col-md-4 col-sm-6 mb-3 flip-box-wrapper">
-                            <div class="flip-box">
-                                <div class="inner">
-                                    <div class="front">
-                                        <h2 class="white mb-0">
-                                            <?php echo $front; ?>
-                                        </h2>
-                                    </div>
-                                    <div class="back">
-                                        <p class="white mb-0">
-                                            <?php echo $back; ?>
-                                        </p>
+                        $screens = array(
+                            'desktop',
+                            'mobile'
+                        );
+                        foreach($screens as $screen):
+                            ?>
+                            <div class="col-md-4 col-sm-6 mb-3 flip-box-wrapper <?php echo $screen; ?>">
+                                <div class="flip-box">
+                                    <div class="inner">
+                                        <div class="front">
+                                            <h2 class="white mb-0">
+                                                <?php echo $front; ?>
+                                            </h2>
+                                        </div>
+                                        <div class="back">
+                                            <p class="white mb-0">
+                                                <?php echo $back; ?>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <?php
+                            <?php
+                        endforeach;
                     endwhile;
                     ?>
                 </div>
@@ -122,7 +128,7 @@ get_header(); ?>
                             <?php
                             while(have_rows('benefit_list')):
                                 the_row();
-                                echo '<li>' . get_sub_field('benefit') . '</li>';
+                                echo '<li><strong>' . get_sub_field('benefit') . '</strong></li>';
                             endwhile;
                             ?>
                         </ul>
@@ -142,13 +148,16 @@ get_header(); ?>
                         the_row();
                         ?>
                         <li>
-                            <strong>
-                                <?php the_sub_field('job_title'); ?>
-                            </strong>
-                            <span></span>
-                            <?php the_sub_field('location'); ?>
-                            <span></span>
-                            <?php the_sub_field('time'); ?>
+                            <a href="<?php the_sub_field('link'); ?>" target="_blank">
+                                <strong>
+                                    <?php the_sub_field('job_title'); ?>
+                                </strong>
+                                <span></span>
+                                <?php the_sub_field('location'); ?>
+                                <span></span>
+                                <?php the_sub_field('time'); ?>
+                                <i class="fa-solid fa-caret-right"></i>
+                            </a>
                         </li>
                         <?php
                     endwhile;

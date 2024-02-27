@@ -37,7 +37,7 @@ elseif(is_page_template('single-about.php')):
     include(get_stylesheet_directory() . '/parts/hero/hero-about.php');
 
 // Contact
-elseif(is_page_template('single-about.php')):
+elseif(is_page_template('single-contact.php')):
     include(get_stylesheet_directory() . '/parts/hero/hero-contact.php');
 
 

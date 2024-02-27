@@ -27,3 +27,17 @@
         }
     }
 }
+
+@include media-breakpoint-down(md) {
+    #about {
+        .part {
+            background-size: contain;
+
+            &.one,
+            &.two,
+            &.three {
+                background-position: center;
+            }
+        }
+    }
+}

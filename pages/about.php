@@ -33,7 +33,9 @@ get_header(); ?>
                     <?php
                     if($photo = get_field('photo')):
                         ?>
-                        <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow">
+                        <div class="white-frame drop-shadow inset-shadow">
+                            <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" class="img-fluid">
+                        </div>
                         <?php
                     endif;
                     ?>
@@ -58,12 +60,13 @@ get_header(); ?>
                             </div>
                         </div>
                         <div class="row align-items-end">
-                            <div class="col-md-7"></div>
-                            <div class="col-md-5">
+                            <div class="col-md-5 offset-md-7">
                                 <?php
                                 if($p1_square = get_field('p1_square_image')):
                                     ?>
-                                    <img src="<?php echo $p1_square['url']; ?>" alt="<?php echo $p1_square['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow my-3">
+                                    <div class="white-frame drop-shadow inset-shadow my-3">
+                                        <img src="<?php echo $p1_square['url']; ?>" alt="<?php echo $p1_square['alt']; ?>" class="img-fluid">
+                                    </div>
                                     <?php
                                 endif;
                                 ?>
@@ -75,25 +78,26 @@ get_header(); ?>
                         <?php
                         if($p1_tall = get_field('p1_tall_image')):
                             ?>
-                            <img src="<?php echo $p1_tall['url']; ?>" alt="<?php echo $p1_tall['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p1_tall['url']; ?>" alt="<?php echo $p1_tall['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 offset-md-6">
                         <?php
                         if($p1_wide = get_field('p1_wide_image')):
                             ?>
-                            <img src="<?php echo $p1_wide['url']; ?>" alt="<?php echo $p1_wide['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow">
+                            <div class="white-frame drop-shadow inset-shadow">
+                                <img src="<?php echo $p1_wide['url']; ?>" alt="<?php echo $p1_wide['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
-
                     </div>
-                    <div class="col-md-1"></div>
                 </div>
             </div>
         </section>
@@ -105,18 +109,21 @@ get_header(); ?>
                         <?php
                         if($p2_wide = get_field('p2_wide_image')):
                             ?>
-                            <img src="<?php echo $p2_wide['url']; ?>" alt="<?php echo $p2_wide['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p2_wide['url']; ?>" alt="<?php echo $p2_wide['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
 
                         <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-8">
+                            <div class="col-md-8 offset-md-3">
                                 <?php
                                 if($p2_square = get_field('p2_square_image')):
                                     ?>
-                                    <img src="<?php echo $p2_square['url']; ?>" alt="<?php echo $p2_square['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                                    <div class="white-frame drop-shadow inset-shadow">
+                                        <img src="<?php echo $p2_square['url']; ?>" alt="<?php echo $p2_square['alt']; ?>" class="img-fluid">
+                                    </div>
                                     <?php
                                 endif;
                                 ?>
@@ -145,12 +152,13 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3 pt-5">
+                    <div class="col-md-3 offset-md-2 pt-5">
                         <?php
                         if($p3_tall = get_field('p3_tall_image')):
                             ?>
-                            <img src="<?php echo $p3_tall['url']; ?>" alt="<?php echo $p3_tall['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3 mt-5">
+                            <div class="white-frame drop-shadow inset-shadow mb-3 mt-5">
+                                <img src="<?php echo $p3_tall['url']; ?>" alt="<?php echo $p3_tall['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
@@ -159,7 +167,9 @@ get_header(); ?>
                         <?php
                         if($p3_wide = get_field('p3_wide_image')):
                             ?>
-                            <img src="<?php echo $p3_wide['url']; ?>" alt="<?php echo $p3_wide['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p3_wide['url']; ?>" alt="<?php echo $p3_wide['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
@@ -178,26 +188,31 @@ get_header(); ?>
                 </h1>
                 <?php the_field('p1_text'); ?>
                 <div class="row">
+                    <div class="col-sm-6 d-flex justify-content-center align-items-start">
+                        <?php
+                        if($p1_tall = get_field('p1_tall_image')):
+                            ?>
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p1_tall['url']; ?>" alt="<?php echo $p1_tall['alt']; ?>" class="img-fluid">
+                            </div>
+                            <?php
+                        endif;
+                        ?>
+                    </div>
                     <div class="col-sm-6">
                         <?php
                         if($p1_square = get_field('p1_square_image')):
                             ?>
-                            <img src="<?php echo $p1_square['url']; ?>" alt="<?php echo $p1_square['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p1_square['url']; ?>" alt="<?php echo $p1_square['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         if($p1_wide = get_field('p1_wide_image')):
                             ?>
-                            <img src="<?php echo $p1_wide['url']; ?>" alt="<?php echo $p1_wide['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
-                            <?php
-                        endif;
-                        ?>
-
-                    </div>
-                    <div class="col-sm-6 d-flex justify-content-center">
-                        <?php
-                        if($p1_tall = get_field('p1_tall_image')):
-                            ?>
-                            <img src="<?php echo $p1_tall['url']; ?>" alt="<?php echo $p1_tall['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p1_wide['url']; ?>" alt="<?php echo $p1_wide['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
@@ -216,7 +231,9 @@ get_header(); ?>
                         <?php
                         if($p2_wide = get_field('p2_wide_image')):
                             ?>
-                            <img src="<?php echo $p2_wide['url']; ?>" alt="<?php echo $p2_wide['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p2_wide['url']; ?>" alt="<?php echo $p2_wide['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
@@ -225,7 +242,9 @@ get_header(); ?>
                         <?php
                         if($p2_square = get_field('p2_square_image')):
                             ?>
-                            <img src="<?php echo $p2_square['url']; ?>" alt="<?php echo $p2_square['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow">
+                            <div class="white-frame drop-shadow inset-shadow">
+                                <img src="<?php echo $p2_square['url']; ?>" alt="<?php echo $p2_square['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
@@ -241,11 +260,13 @@ get_header(); ?>
                 <?php the_field('p3_text'); ?>
 
                 <div class="row">
-                    <div class="col-sm-4 d-flex justify-content-center">
+                    <div class="col-sm-4 d-flex justify-content-center align-items-start">
                         <?php
                         if($p3_tall = get_field('p3_tall_image')):
                             ?>
-                            <img src="<?php echo $p3_tall['url']; ?>" alt="<?php echo $p3_tall['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow mb-3">
+                            <div class="white-frame drop-shadow inset-shadow mb-3">
+                                <img src="<?php echo $p3_tall['url']; ?>" alt="<?php echo $p3_tall['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>
@@ -254,7 +275,9 @@ get_header(); ?>
                         <?php
                         if($p3_wide = get_field('p3_wide_image')):
                             ?>
-                            <img src="<?php echo $p3_wide['url']; ?>" alt="<?php echo $p3_wide['alt']; ?>" class="img-fluid white-frame drop-shadow inset-shadow">
+                            <div class="white-frame drop-shadow inset-shadow">
+                                <img src="<?php echo $p3_wide['url']; ?>" alt="<?php echo $p3_wide['alt']; ?>" class="img-fluid">
+                            </div>
                             <?php
                         endif;
                         ?>

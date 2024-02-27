@@ -407,6 +407,27 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_65d3bad6c2716"
+                },
+                {
+                    "key": "field_65d4f30f114f0",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65d3bad6c2716"
                 }
             ]
         }
@@ -450,5 +471,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708386247
+    "modified": 1708454690
 }

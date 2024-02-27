@@ -17,13 +17,15 @@ function fount_load_scripts() {
     wp_enqueue_script('plugins', get_stylesheet_directory_uri().'/js/plugins.js', false, null);
     wp_enqueue_script('vimeo', 'https://player.vimeo.com/api/player.js', false, null);
 
-    wp_enqueue_script('scripts', get_stylesheet_directory_uri().'/js/script.js', false, null);
+    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/script.js', array(), filemtime(get_stylesheet_directory() . '/js/script.js'));
+
     wp_enqueue_script('icons', 'https://kit.fontawesome.com/e4c9cbfaf8.js', false, null);
     wp_enqueue_script('acf_google_map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAfEiU2u8YqFdGTJckl-RVE0lEh6i0CDp8&callback=Function.prototype', false, null);
     wp_enqueue_style('fonts', '//fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Slab:wght@700;900&family=Roboto:wght@300;400;700&display=swap', array(), null);
 
     //if(ENVIRONMENT == "development") {
-        wp_enqueue_style('main', get_stylesheet_directory_uri().'/devcss/style.css', array(), false, 'all');
+        wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/devcss/style.css', array(), filemtime(get_stylesheet_directory() . '/devcss/style.css'));
+
     //} else {
         //wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.css', array(), false, 'all');
     //}

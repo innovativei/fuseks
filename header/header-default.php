@@ -15,7 +15,7 @@ Website: http://innovativei.com
 <head>
 
     <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-    <title><?php wp_title( '-', true, 'right' ); ?></title>
+    <title><?php wp_title( '-', true, 'right' ); echo get_bloginfo('title'); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

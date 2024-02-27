@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_65d4da6b1ee33",
+    "title": "Error Page",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Error Page",
+    "menu_slug": "error-page",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "dashicons-editor-unlink",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1708448443
+}
