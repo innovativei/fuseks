@@ -5161,6 +5161,9 @@ nav.secondary ul.social li + li::before {
   height: auto;
   aspect-ratio: auto;
 }
+#testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide::before {
+  display: none;
+}
 #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .drop-shadow, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.primary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .arrow::before, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .arrow::before, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.primary ul li.dropdown .dropdown-wrapper .links, nav.primary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .links, #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide nav.secondary ul li.dropdown .dropdown-wrapper .links, nav.secondary ul li.dropdown .dropdown-wrapper #testimonial .slider-wrapper .slider-hand-arrows .slick-list .slick-track .slick-slide .links {
   margin: 30px;
 }

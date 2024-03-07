@@ -49,6 +49,10 @@
                         height: auto;
                         aspect-ratio: auto;
 
+                        &::before {
+                            display: none;
+                        }
+
                         .drop-shadow {
                             margin: 30px;
                         }
