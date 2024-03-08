@@ -84,49 +84,9 @@
             "append": ""
         },
         {
-            "key": "field_65d38e681ffd4",
-            "label": "Headline (copy)",
-            "name": "headline_copy",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_65cfd2354443a",
             "label": "Information",
             "name": "information",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "text",
-            "media_upload": 0,
-            "toolbar": "full",
-            "delay": 0
-        },
-        {
-            "key": "field_65d38e6b1ffd5",
-            "label": "Information (copy)",
-            "name": "information_copy",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -174,26 +134,6 @@
             "key": "field_65cfd26b4443b",
             "label": "Shop Online Link",
             "name": "shop_online_link",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65d38e741ffd6",
-            "label": "Shop Online Link (copy)",
-            "name": "shop_online_link_copy",
             "aria-label": "",
             "type": "text",
             "instructions": "",

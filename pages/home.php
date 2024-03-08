@@ -120,7 +120,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="buttons mb-0 text-center">
-                    <a href="/brands" target="_blank" class="button mb-0">View All Brands</a>
+                    <a href="/brands" class="button mb-0">View All Brands</a>
                 </div>
             </div>
         </section>
@@ -240,7 +240,9 @@ get_header(); ?>
                         <div class="col-lg-7">
                             <div class="row">
                                 <div class="col-lg-11">
-                                    <p class="white"><?php the_field('intro_paragraph'); ?>.</p>
+                                    <p class="white">
+                                        <?php the_field('intro_paragraph'); ?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="row">
