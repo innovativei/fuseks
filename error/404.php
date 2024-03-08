@@ -26,7 +26,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-4">
                     <a href="/brands" class="d-block white-frame drop-shadow inset-shadow mb-1">
-                        <img src="<?php the_field('brands_image', 'options'); ?>" alt="Our Brands" class="img-fluid">
+                        <img src="<?php the_field('brands_image', 'option'); ?>" alt="Our Brands" class="img-fluid">
                     </a>
                     <a href="/brands" class="mb-3">
                         <h2 class="black text-center">Our Brands</h2>
@@ -34,7 +34,7 @@ get_header(); ?>
                 </div>
                 <div class="col-md-4">
                     <a href="/services" class="d-block white-frame drop-shadow inset-shadow mb-1">
-                        <img src="<?php the_field('services_image', 'options'); ?>" alt="Our Services" class="img-fluid">
+                        <img src="<?php the_field('services_image', 'option'); ?>" alt="Our Services" class="img-fluid">
                     </a>
                     <a href="/services" class="mb-3">
                         <h2 class="black text-center">Our Services</h2>
@@ -42,7 +42,7 @@ get_header(); ?>
                 </div>
                 <div class="col-md-4">
                     <a href="/about" class="d-block white-frame drop-shadow inset-shadow mb-1">
-                        <img src="<?php the_field('our_story_image', 'options'); ?>" alt="Our Story" class="img-fluid">
+                        <img src="<?php the_field('our_story_image', 'option'); ?>" alt="Our Story" class="img-fluid">
                     </a>
                     <a href="/about" class="mb-3">
                         <h2 class="black text-center">Our Story</h2>

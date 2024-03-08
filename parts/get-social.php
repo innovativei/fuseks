@@ -6,7 +6,7 @@
             <div class="col-sm-6 offset-sm-6">
                 <h2 class="white mt-lg-2 mb-1 text-center text-sm-left">Get Social<br class="d-none d-sm-block" /><span class="d-inline d-md-none"> </span>With Us!</h2>
                 <?php
-                if(have_rows('social_media', 'options')):
+                if(have_rows('social_media', 'option')):
                     ?>
                     <ul class="mb-lg-4 mb-md-2 text-center text-sm-left">
                         <?php
