@@ -16,6 +16,7 @@
                     <div 
                         id="home-hero-slider" 
                         class="slider-hand-arrows drop-shadow" 
+                        data-autoplay="true"
                     >
                         <?php
                         while(have_rows('hero_slider')):

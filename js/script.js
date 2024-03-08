@@ -106,7 +106,7 @@
             if ($(this).data('autospeed')) {
                 var autoplaySpeed = $(this).data('autospeed');
             } else {
-                var autoplaySpeed = 3000;
+                var autoplaySpeed = 4000;
             }
 
             if ($(this).data('adaptiveheight')) {
