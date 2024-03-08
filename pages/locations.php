@@ -115,12 +115,12 @@ get_header();
                                 }elseif(get_field('logo_type') == 'link'){
                                     $logo = get_field('logo_link');
                                 }
-                                $permalink  = get_permalink();
+                                //$permalink  = get_permalink();
 
                                 $brand_hopper[$i] = array(
                                     'brand_name'    => $brand_name,
                                     'logo'          => $logo,
-                                    'permalink'     => $permalink,
+                                    //'permalink'     => $permalink,
                                 );
                             }
                             $i++;
@@ -138,9 +138,13 @@ get_header();
             function build_brand_slide($brand) {
                 ?>
                 <div>
+                    <!--
                     <a href="<?php echo $brand['permalink']; ?>" target="_blank" class="d-block">
+                    -->
                         <img src="<?php echo $brand['logo']; ?>" class="img-fluid" alt="<?php echo $brand['brand_name']; ?>">
+                    <!--
                     </a>
+                    -->
                 </div>
                 <?php
             }

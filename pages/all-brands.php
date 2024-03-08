@@ -42,7 +42,7 @@ get_header();
                         if($featured_brand_id):
                             foreach($featured_brand_id as $feat_brand):
                                 $featured_brand_info['name'] = get_the_title($feat_brand);
-                                $featured_brand_info['link'] = get_the_permalink($feat_brand);
+                                //$featured_brand_info['link'] = get_the_permalink($feat_brand);
                                 if(get_field('logo_type', $feat_brand) == 'image') {
                                     $featured_brand_info['logo'] = get_field('logo', $feat_brand);
                                 }elseif(get_field('logo_type', $feat_brand) == 'link'){
@@ -61,7 +61,10 @@ get_header();
                             endif;
                             ?>
 
+                            <!--
                             <a href="<?php echo $featured_brand_info['link']; ?>" class="<?php echo $featured_brand_image_classes; ?>">
+                            -->
+                            <div class="<?php echo $featured_brand_image_classes; ?>">
                                 <?php
                                 $featured_brand_image_output    = '<img src="';
 
@@ -76,14 +79,21 @@ get_header();
                                 $featured_brand_image_output   .= '" class="img-fluid">';
                                 echo $featured_brand_image_output;
                                 ?>
+                            </div>
+                            <!--
                             </a>
+                            -->
 
                             <h3 class="black mb-0">
+                                <!--
                                 <a href="<?php echo $featured_brand_info['link']; ?>">
+                                -->
                                     <?php
                                     echo $featured_brand_info['name'];
                                     ?>
+                                <!--
                                 </a>
+                                -->
                             </h3>
 
                             <?php
@@ -135,7 +145,7 @@ get_header();
             $brands_query->the_post();
 
             $brand_hopper[$i]['name']   = get_the_title();
-            $brand_hopper[$i]['link']   = get_the_permalink();
+            //$brand_hopper[$i]['link']   = get_the_permalink();
             if(get_field('logo_type') == 'image') {
                 $brand_hopper[$i]['logo'] = get_field('logo');
             }elseif(get_field('logo_type') == 'link'){
@@ -160,9 +170,15 @@ get_header();
         endforeach;
         ?>
         <div class="col-6 col-sm-4 col-lg-3 mb-3 brand" data-locs="<?php echo $brand_locations; ?>">
+            <!--
             <a href="<?php echo $brand['link']; ?>" class="d-flex justify-content-center align-items-center w-100 p-2 p-sm-0">
+            -->
+            <a class="d-flex justify-content-center align-items-center w-100 p-2 p-sm-0">
                 <img src="<?php echo $brand['logo']; ?>" class="img-fluid" alt="<?php echo $brand['name']; ?>">
             </a>
+            <!--
+            </a>
+            -->
         </div>
         <?php
     }
