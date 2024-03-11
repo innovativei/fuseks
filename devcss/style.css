@@ -5864,6 +5864,13 @@ form .select .select-options li.hide {
     margin-bottom: 15px;
   }
 }
+.wysiwyg a {
+  color: #B73D25;
+}
+.wysiwyg a:hover {
+  color: #8d9f80;
+}
+
 /** Pages **/
 #home > section {
   border-bottom: 8px solid #000;

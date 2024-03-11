@@ -142,6 +142,9 @@ get_header(); ?>
             <?php
             if(have_rows('open_positions')):
                 ?>
+                <div class="wysiwyg">
+                    <?php the_field('open_positions_text'); ?>
+                </div>
                 <ul class="positions">
                     <?php
                     while(have_rows('open_positions')):
@@ -163,6 +166,12 @@ get_header(); ?>
                     endwhile;
                     ?>
                 </ul>
+                <?php
+            else:
+                ?>
+                <div class="wysiwyg">
+                    <?php the_field('no_open_positions_text'); ?>
+                </div>
                 <?php
             endif;
             ?>
