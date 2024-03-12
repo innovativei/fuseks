@@ -4290,7 +4290,8 @@ input[type=submit]:hover,
 #careers .flip-box-wrapper.mobile .flip-box .inner::before,
 #careers .flip-box-wrapper.mobile .flip-box .inner::after,
 #careers .in-page-link,
-#all-brands #brand-hopper .brand a img,
+#all-brands #brand-hopper .brand .has-stock .logo,
+#all-brands #brand-hopper .brand .has-stock .stock,
 #all-brands #brand-filter-bar #filter-dropdown .options .location,
 #all-brands #brand-filter-bar #filter-dropdown .placeholder,
 #all-brands #brand-filter-bar #filter-dropdown i,
@@ -4315,7 +4316,8 @@ nav.secondary ul li.dropdown .dropdown-wrapper .arrow,
 nav.primary ul li.dropdown .dropdown-wrapper,
 nav.secondary ul li.dropdown .dropdown-wrapper,
 .transition:hover,
-#all-brands #brand-hopper .brand a img:hover,
+#all-brands #brand-hopper .brand .has-stock .logo:hover,
+#all-brands #brand-hopper .brand .has-stock .stock:hover,
 .slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li button:hover::before {
   transition: all 0.3s ease;
 }
@@ -4392,6 +4394,9 @@ nav.secondary ul li.dropdown .dropdown-wrapper,
 
 .white-frame {
   border: 20px solid #fff;
+}
+.white-frame.small-frame {
+  border-width: 10px;
 }
 
 strong,
@@ -6048,12 +6053,6 @@ form .select .select-options li.hide {
     border-width: 10px;
   }
 }
-#all-brands .featured-brand h3 a {
-  color: #000;
-}
-#all-brands .featured-brand h3 a:hover {
-  color: #8d9f80;
-}
 #all-brands .featured-brand p a {
   color: #000;
 }
@@ -6127,17 +6126,36 @@ form .select .select-options li.hide {
     clear: both;
   }
 }
-#all-brands #brand-hopper .brand a {
+#all-brands #brand-hopper .brand .has-stock,
+#all-brands #brand-hopper .brand .no-stock {
   height: calc(100% - 30px);
 }
-#all-brands #brand-hopper .brand a:hover img {
-  transform: scale(1);
+#all-brands #brand-hopper .brand .has-stock {
+  position: relative;
 }
-#all-brands #brand-hopper .brand a img {
-  transform: scale(0.9);
-  max-width: 80%;
+#all-brands #brand-hopper .brand .has-stock:hover .logo {
+  opacity: 0;
+}
+#all-brands #brand-hopper .brand .has-stock:hover .stock {
+  opacity: 1;
+}
+#all-brands #brand-hopper .brand .has-stock .stock {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
 }
 
+@media (max-width: 767.98px) {
+  #all-brands #brand-hopper .brand .has-stock:hover .logo {
+    opacity: 1;
+  }
+  #all-brands #brand-hopper .brand .has-stock:hover .stock {
+    opacity: 0;
+  }
+}
 @media (max-width: 575.98px) {
   #all-brands #brand-filter-bar #filter-dropdown {
     margin-left: 0;

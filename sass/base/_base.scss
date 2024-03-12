@@ -126,6 +126,10 @@ input[type="submit"]:hover,
 
 .white-frame {
     border: 20px solid $white;
+
+    &.small-frame {
+        border-width: 10px;
+    }
 }
 
 strong,
