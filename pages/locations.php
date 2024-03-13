@@ -110,17 +110,21 @@ get_header();
                             ) {
                                 $brand_name = get_field('brand_name');
                                 $logo       = get_field('logo');
+                                if(get_field('hover_image')){
+                                    $stock  = get_field('hover_image');
+                                } else {
+                                    $stock  = '';
+                                }
                                 if(get_field('logo_type') == 'image') {
                                     $logo = get_field('logo');
                                 }elseif(get_field('logo_type') == 'link'){
                                     $logo = get_field('logo_link');
                                 }
-                                //$permalink  = get_permalink();
 
                                 $brand_hopper[$i] = array(
                                     'brand_name'    => $brand_name,
                                     'logo'          => $logo,
-                                    //'permalink'     => $permalink,
+                                    'stock'         => $stock,
                                 );
                             }
                             $i++;
@@ -138,13 +142,14 @@ get_header();
             function build_brand_slide($brand) {
                 ?>
                 <div>
-                    <!--
-                    <a href="<?php echo $brand['permalink']; ?>" target="_blank" class="d-block">
-                    -->
-                        <img src="<?php echo $brand['logo']; ?>" class="img-fluid" alt="<?php echo $brand['brand_name']; ?>">
-                    <!--
-                    </a>
-                    -->
+                    <div class="d-flex align-items-center <?php echo $stock = empty($brand['stock']) ? 'no-stock' : 'has-stock'; ?>">
+                        <img src="<?php echo $brand['logo']; ?>" class="img-fluid logo" alt="<?php echo $brand['brand_name']; ?>">
+                        <?php
+                        if($brand['stock'] !== ''){
+                            echo '<div class="stock white-frame small-frame drop-shadow inset-shadow" style="background-image: url(' . $brand['stock'] . ');"></div>';
+                        }
+                        ?>
+                    </div>
                 </div>
                 <?php
             }
@@ -247,7 +252,7 @@ get_header();
             function build_team_member_slide($team_member) {
                 ?>
                 <div>
-                    <img src="<?php echo $team_member['photo']; ?>" class="white-frame drop-shadow inset-shadow img-fluid" alt=" <?php echo $team_member['first_name'] . ' ' . $team_member['last_name']; ?>">
+                    <img src="<?php echo $team_member['photo']; ?>" class="white-frame small-frame drop-shadow inset-shadow img-fluid" alt=" <?php echo $team_member['first_name'] . ' ' . $team_member['last_name']; ?>">
                     <p class="text-center mb-0">
                         <strong>
                             <?php echo $team_member['first_name'] . ' ' . $team_member['last_name']; ?>

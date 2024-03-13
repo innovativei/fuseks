@@ -43,12 +43,16 @@ get_header(); ?>
             $brand_query->the_post();
 
             $brand_hopper[$i]['brand_name'] = get_field('brand_name');
+            if(get_field('hover_image')){
+                $brand_hopper[$i]['stock']  = get_field('hover_image');
+            } else {
+                $brand_hopper[$i]['stock']  = '';
+            }
             if(get_field('logo_type') == 'image') {
                 $brand_hopper[$i]['logo'] = get_field('logo');
             }elseif(get_field('logo_type') == 'link'){
                 $brand_hopper[$i]['logo'] = get_field('logo_link');
             }
-            //$brand_hopper[$i]['permalink']  = get_permalink();
             $i++;
         endwhile;
         wp_reset_postdata();
@@ -61,13 +65,14 @@ get_header(); ?>
     function build_brand_slide($brand) {
         ?>
         <div>
-            <!--
-            <a href="<?php echo $brand['permalink']; ?>" target="_blank" class="d-block">
-            -->
-                <img src="<?php echo $brand['logo']; ?>" class="img-fluid" alt="<?php echo $brand['brand_name']; ?>">
-            <!--
-            </a>
-            -->
+            <div class="d-flex align-items-center <?php echo $stock = empty($brand['stock']) ? 'no-stock' : 'has-stock'; ?>">
+                <img src="<?php echo $brand['logo']; ?>" class="img-fluid logo" alt="<?php echo $brand['brand_name']; ?>">
+                <?php
+                if($brand['stock'] !== ''){
+                    echo '<div class="stock white-frame small-frame drop-shadow inset-shadow" style="background-image: url(' . $brand['stock'] . ');"></div>';
+                }
+                ?>
+            </div>
         </div>
         <?php
     }

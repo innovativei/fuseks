@@ -4146,7 +4146,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 75% !important;
 }
 
-.h-100 {
+.h-100, #location .slider-hand-arrows.brand .slick-slide .has-stock, #home #featured-brands .slider-hand-arrows .slick-slide .has-stock {
   height: 100% !important;
 }
 
@@ -4295,6 +4295,10 @@ input[type=submit]:hover,
 #all-brands #brand-filter-bar #filter-dropdown .options .location,
 #all-brands #brand-filter-bar #filter-dropdown .placeholder,
 #all-brands #brand-filter-bar #filter-dropdown i,
+#location .slider-hand-arrows.brand .slick-slide .has-stock .logo,
+#location .slider-hand-arrows.brand .slick-slide .has-stock .stock,
+#home #featured-brands .slider-hand-arrows .slick-slide .has-stock .logo,
+#home #featured-brands .slider-hand-arrows .slick-slide .has-stock .stock,
 .slider-wrapper .slider-hand-arrows ~ .mobile-controls .slider-dots ul li button::before,
 form .select .select-options li,
 form .select .select-styled::before,
@@ -4343,10 +4347,6 @@ nav.secondary ul li.dropdown .dropdown-wrapper,
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-.h100 {
-  height: 100%;
 }
 
 .rel {
@@ -5930,6 +5930,20 @@ form .select .select-options li.hide {
     clear: both;
   }
 }
+#home #featured-brands .slider-hand-arrows .slick-slide .has-stock:hover .logo {
+  opacity: 0;
+}
+#home #featured-brands .slider-hand-arrows .slick-slide .has-stock:hover .stock {
+  opacity: 1;
+}
+#home #featured-brands .slider-hand-arrows .slick-slide .has-stock .stock {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
 #home #bargain .slider-hand-arrows {
   aspect-ratio: 16/9;
 }
@@ -5988,6 +6002,12 @@ form .select .select-options li.hide {
   #home #about {
     padding-bottom: 70px;
   }
+  #home #featured-brands .slider-hand-arrows.brand .slick-slide .has-stock:hover .logo {
+    opacity: 1;
+  }
+  #home #featured-brands .slider-hand-arrows.brand .slick-slide .has-stock:hover .stock {
+    opacity: 0;
+  }
 }
 #location .get-directions a:hover {
   color: #8d9f80;
@@ -6009,7 +6029,6 @@ form .select .select-options li.hide {
   padding: 15px;
 }
 #location .slider-hand-arrows .slick-slide .white-frame {
-  border-width: 15px;
   margin-bottom: 10px;
 }
 #location .slider-hand-arrows .slick-slide .drop-shadow, #location .slider-hand-arrows .slick-slide nav.primary ul li.dropdown .dropdown-wrapper .arrow::before, nav.primary ul li.dropdown .dropdown-wrapper #location .slider-hand-arrows .slick-slide .arrow::before, #location .slider-hand-arrows .slick-slide nav.secondary ul li.dropdown .dropdown-wrapper .arrow::before, nav.secondary ul li.dropdown .dropdown-wrapper #location .slider-hand-arrows .slick-slide .arrow::before, #location .slider-hand-arrows .slick-slide nav.primary ul li.dropdown .dropdown-wrapper .links, nav.primary ul li.dropdown .dropdown-wrapper #location .slider-hand-arrows .slick-slide .links, #location .slider-hand-arrows .slick-slide nav.secondary ul li.dropdown .dropdown-wrapper .links, nav.secondary ul li.dropdown .dropdown-wrapper #location .slider-hand-arrows .slick-slide .links {
@@ -6037,6 +6056,20 @@ form .select .select-options li.hide {
     clear: both;
   }
 }
+#location .slider-hand-arrows.brand .slick-slide .has-stock:hover .logo {
+  opacity: 0;
+}
+#location .slider-hand-arrows.brand .slick-slide .has-stock:hover .stock {
+  opacity: 1;
+}
+#location .slider-hand-arrows.brand .slick-slide .has-stock .stock {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
 
 @media (max-width: 1199.98px) {
   #location .slider-hand-arrows.team + .hand-arrows .arrow {
@@ -6045,12 +6078,16 @@ form .select .select-options li.hide {
 }
 @media (max-width: 991.98px) {
   #location .slider-hand-arrows {
+    padding: 0;
     margin: 0 -15px;
   }
 }
 @media (max-width: 767.98px) {
-  #location .slider-hand-arrows .slick-slide .white-frame {
-    border-width: 10px;
+  #location .slider-hand-arrows.brand .slick-slide .has-stock:hover .logo {
+    opacity: 1;
+  }
+  #location .slider-hand-arrows.brand .slick-slide .has-stock:hover .stock {
+    opacity: 0;
   }
 }
 #all-brands .featured-brand p a {

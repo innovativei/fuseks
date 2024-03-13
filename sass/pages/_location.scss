@@ -31,7 +31,6 @@
             padding: 15px;
 
             .white-frame {
-                border-width: 15px;
                 margin-bottom: 10px;
             }
 
@@ -70,6 +69,34 @@
                         clear: both;
                     }
                 }
+
+                .has-stock {
+                    @extend .h-100;
+
+                    &:hover {
+                        .logo {
+                            opacity: 0;
+                        }
+
+                        .stock {
+                            opacity: 1;
+                        }
+                    }
+
+                    .logo,
+                    .stock {
+                        @extend .transition;
+                    }
+
+                    .stock {
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        position: absolute;
+                        inset: 0;
+                        opacity: 0;
+                    }
+                }
             }
         }
     }
@@ -92,6 +119,7 @@
 @include media-breakpoint-down(md) {
     #location {
         .slider-hand-arrows {
+            padding: 0;
             margin: 0 -15px;
         }
     }
@@ -100,9 +128,19 @@
 @include media-breakpoint-down(sm) {
     #location {
         .slider-hand-arrows {
-            .slick-slide {
-                .white-frame {
-                    border-width: 10px;
+            &.brand {
+                .slick-slide {
+                    .has-stock {
+                        &:hover {
+                            .logo {
+                                opacity: 1;
+                            }
+
+                            .stock {
+                                opacity: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
