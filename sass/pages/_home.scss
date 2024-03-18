@@ -122,6 +122,10 @@
         background-size: 460px;
         background-position: 20% center;
         border-bottom: 0;
+
+        p {
+            color: $white;
+        }
     }
 }
 
@@ -176,10 +180,6 @@
             }
         }
 
-        #about {
-            padding-bottom: 70px;
-        }
-
         #featured-brands {
             .slider-hand-arrows {
                 &.brand {
@@ -198,6 +198,10 @@
                     }
                 }
             }
+        }
+
+        #about {
+            padding-bottom: 70px;
         }
     }
 }

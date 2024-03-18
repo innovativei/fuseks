@@ -4451,6 +4451,10 @@ b {
   }
 }
 
+.img-link:hover + h2 {
+  color: #8d9f80;
+}
+
 @media (max-width: 1199.98px) {
   .white-frame {
     border-width: 15px;
@@ -4509,6 +4513,12 @@ h1, #careers .in-page-link {
 h2 {
   font-family: "Roboto Slab", serif;
   font-size: 28px;
+}
+h2 a {
+  color: inherit;
+}
+h2 a:hover {
+  color: #8d9f80;
 }
 
 h3 {
@@ -5967,6 +5977,9 @@ form .select .select-options li.hide {
   background-position: 20% center;
   border-bottom: 0;
 }
+#home #about p {
+  color: #fff;
+}
 
 @media (max-width: 1199.98px) {
   #home #order-now .header {
@@ -5999,14 +6012,14 @@ form .select .select-options li.hide {
     font-size: 20px;
     line-height: 1.4;
   }
-  #home #about {
-    padding-bottom: 70px;
-  }
   #home #featured-brands .slider-hand-arrows.brand .slick-slide .has-stock:hover .logo {
     opacity: 1;
   }
   #home #featured-brands .slider-hand-arrows.brand .slick-slide .has-stock:hover .stock {
     opacity: 0;
+  }
+  #home #about {
+    padding-bottom: 70px;
   }
 }
 #location .get-directions a:hover {

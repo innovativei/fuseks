@@ -54,9 +54,9 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "text",
+            "tabs": "all",
+            "toolbar": "fount_simplified",
             "media_upload": 0,
-            "toolbar": "full",
             "delay": 0
         },
         {
@@ -513,5 +513,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708388544
+    "modified": 1710532279
 }

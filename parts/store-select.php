@@ -16,10 +16,12 @@
             $location_phone = get_field('phone');
             ?>
             <div class="col-md-6 mb-3">
-                <a href="<?php the_permalink(); ?>" class="d-block white-frame drop-shadow inset-shadow mb-1">
+                <a href="<?php the_permalink(); ?>" class="d-block white-frame drop-shadow inset-shadow img-link mb-0">
                     <img src="<?php echo $location_image['url']; ?>" class="img-fluid">
                 </a>
-                <h2 class="black mb-0">Fusek's True Value <?php the_title(); ?></h2>
+                <h2 class="black mb-0 pt-1">
+                    <a href="<?php the_permalink(); ?>">Fusek's True Value <?php the_title(); ?></a>
+                </h2>
                 <?php
                 if(is_page_template('single-contact.php')):
                     ?>

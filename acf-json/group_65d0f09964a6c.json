@@ -40,26 +40,6 @@
             "append": ""
         },
         {
-            "key": "field_65d3b95470f77",
-            "label": "Information (copy)",
-            "name": "information_copy",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "text",
-            "media_upload": 0,
-            "toolbar": "full",
-            "delay": 0
-        },
-        {
             "key": "field_65d0f33f39b99",
             "label": "Information",
             "name": "information",
@@ -74,9 +54,9 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "text",
+            "tabs": "all",
+            "toolbar": "fount_simplified",
             "media_upload": 0,
-            "toolbar": "full",
             "delay": 0
         },
         {
@@ -217,5 +197,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708374360
+    "modified": 1710532868
 }

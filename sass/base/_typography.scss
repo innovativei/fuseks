@@ -29,6 +29,14 @@ h1 {
 h2 {
     font-family: $serif-header-font;
     font-size: 28px;
+
+    a {
+        color: inherit;
+
+        &:hover {
+            color: $green;
+        }
+    }
 }
 
 h3 {

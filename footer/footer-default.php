@@ -32,7 +32,15 @@
                         <?php
                         if(get_field('address')):
                             ?>
-                            <p class="white text-center"><?php the_field('address'); ?></p>
+                            <p class="white text-center">
+                                <?php
+                                the_field('address');
+                                // Hacky trick to make the addresses the same height. Don't judge me.
+                                if(get_the_ID() == 228) {
+                                    echo '<br />&nbsp;';
+                                }
+                                ?>
+                            </p>
                             <?php
                         endif;
                         if(get_field('phone')):

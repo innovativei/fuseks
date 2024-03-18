@@ -249,9 +249,11 @@ get_header(); ?>
                         <div class="col-lg-7">
                             <div class="row">
                                 <div class="col-lg-11">
-                                    <p class="white">
-                                        <?php the_field('intro_paragraph'); ?>
-                                    </p>
+                                    <?php
+                                    if(get_field('intro_paragraph')) {
+                                        the_field('intro_paragraph');
+                                    }
+                                    ?>
                                 </div>
                             </div>
                             <div class="row">

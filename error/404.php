@@ -25,28 +25,28 @@ get_header(); ?>
             <h1 class="black mt-3">These items may also be helpful to you.</h1>
             <div class="row">
                 <div class="col-md-4">
-                    <a href="/brands" class="d-block white-frame drop-shadow inset-shadow mb-1">
+                    <a href="/brands" class="d-block white-frame drop-shadow inset-shadow img-link mb-0">
                         <img src="<?php the_field('brands_image', 'option'); ?>" alt="Our Brands" class="img-fluid">
                     </a>
-                    <a href="/brands" class="mb-3">
-                        <h2 class="black text-center">Our Brands</h2>
-                    </a>
+                    <h2 class="black text-center">
+                        <a href="/brands" class="d-block pt-1">Our Brands</a>
+                    </h2>
                 </div>
                 <div class="col-md-4">
-                    <a href="/services" class="d-block white-frame drop-shadow inset-shadow mb-1">
+                    <a href="/services" class="d-block white-frame drop-shadow inset-shadow img-link mb-0">
                         <img src="<?php the_field('services_image', 'option'); ?>" alt="Our Services" class="img-fluid">
                     </a>
-                    <a href="/services" class="mb-3">
-                        <h2 class="black text-center">Our Services</h2>
-                    </a>
+                    <h2 class="black text-center">
+                        <a href="/services" class="d-block pt-1">Our Services</a>
+                    </h2>
                 </div>
                 <div class="col-md-4">
-                    <a href="/about" class="d-block white-frame drop-shadow inset-shadow mb-1">
+                    <a href="/about" class="d-block white-frame drop-shadow inset-shadow img-link mb-0">
                         <img src="<?php the_field('our_story_image', 'option'); ?>" alt="Our Story" class="img-fluid">
                     </a>
-                    <a href="/about" class="mb-3">
-                        <h2 class="black text-center">Our Story</h2>
-                    </a>
+                    <h2 class="black text-center">
+                        <a href="/about" class="d-block pt-1">Our Story</a>
+                    </h2>
                 </div>
             </div>
     </section>

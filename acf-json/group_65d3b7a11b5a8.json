@@ -54,9 +54,9 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "text",
+            "tabs": "all",
+            "toolbar": "fount_simplified",
             "media_upload": 0,
-            "toolbar": "full",
             "delay": 0
         },
         {
@@ -81,7 +81,7 @@
             "label": "Mission",
             "name": "mission",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -91,18 +91,17 @@
                 "id": ""
             },
             "default_value": "",
-            "acfe_textarea_code": 0,
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": "wpautop"
+            "tabs": "all",
+            "toolbar": "fount_simplified",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_65d3ba16c270c",
             "label": "Vision",
             "name": "vision",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -112,11 +111,10 @@
                 "id": ""
             },
             "default_value": "",
-            "acfe_textarea_code": 0,
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": "wpautop"
+            "tabs": "all",
+            "toolbar": "fount_simplified",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_65d3b9a9c2708",
@@ -254,9 +252,9 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "text",
+            "tabs": "all",
+            "toolbar": "fount_simplified",
             "media_upload": 0,
-            "toolbar": "full",
             "delay": 0
         },
         {
@@ -329,7 +327,7 @@
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "This text will show if there are positions available.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -338,7 +336,7 @@
             },
             "default_value": "",
             "tabs": "all",
-            "toolbar": "basic",
+            "toolbar": "fount_simplified",
             "media_upload": 0,
             "delay": 0
         },
@@ -349,7 +347,7 @@
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "This text will show if there are <strong>NO<\/strong> positions available.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -358,7 +356,7 @@
             },
             "default_value": "",
             "tabs": "all",
-            "toolbar": "basic",
+            "toolbar": "fount_simplified",
             "media_upload": 0,
             "delay": 0
         },
@@ -511,5 +509,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1710167303
+    "modified": 1710533368
 }

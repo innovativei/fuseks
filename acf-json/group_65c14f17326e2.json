@@ -559,9 +559,9 @@
             "label": "Intro Paragraph",
             "name": "intro_paragraph",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "Best to keep this short; just a few sentences at most.",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -569,11 +569,10 @@
                 "id": ""
             },
             "default_value": "",
-            "acfe_textarea_code": 0,
-            "maxlength": "",
-            "rows": 5,
-            "placeholder": "",
-            "new_lines": "br"
+            "tabs": "all",
+            "toolbar": "fount_simplified",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_65cfa6be34a80",
@@ -695,5 +694,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708192245
+    "modified": 1710533691
 }

@@ -177,6 +177,77 @@ function my_acf_google_map_api( $api ){
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
+// Custom ACF WYSIWYG Toolbar
+function fount_wysiwyg_toolbar($toolbars){
+    $toolbars['Fount - Simplified'] = array();
+    $toolbars['Fount - Simplified'][1] = array(
+        'bold',
+        'italic',
+        'underline',
+        'bullist',
+        'numlist',
+        'alignleft',
+        'aligncenter',
+        'alignjustify',
+        'blockquote',
+        'visualchars',
+        'nonbreaking'
+    );
+    $toolbars['Fount - Simplified'][2] = array(
+        'link',
+        'unlink',
+        'removeformat',
+        'undo',
+        'redo',
+        'cut',
+        'copy',
+        'paste',
+        'fullscreen'
+    );
+
+    unset( $toolbars['Basic' ] );
+    unset( $toolbars['Full' ] );
+
+    return $toolbars;
+}
+add_filter('acf/fields/wysiwyg/toolbars', 'fount_wysiwyg_toolbar');
+
+// Remove Quicktags from ACF WYSIWYG Text Tab
+function remove_quicktags($quicktags) {
+    $quicktags['buttons'] = ',';
+    return $quicktags;
+}
+add_filter('quicktags_settings', 'remove_quicktags');
+
+// Limit Locations CPT to 2
+function fusek_limit_locations_cpt() {
+    global $typenow;
+
+    # Not our post type, bail out
+    if('locations' !== $typenow) {
+        return;
+    }
+
+    # Grab all our CPT, adjust the status as needed
+    $total = get_posts( array( 
+        'post_type' => 'locations',
+        'numberposts' => -1,
+        'post_status' => 'publish,future,draft'
+    ));
+
+    # Condition match, block new post
+    if( $total && count( $total ) >= 2 ) {
+        wp_die(
+            'Sorry, maximum number of posts reached.',
+            'Maximum reached',
+            array(
+                'response' => 500,
+                'back_link' => true
+            )
+        );
+    }
+}
+add_action('load-post-new.php', 'fusek_limit_locations_cpt' );
 
 /** Makes sure back end JS & CSS load. */
 define('CONCATENATE_SCRIPTS', false);
