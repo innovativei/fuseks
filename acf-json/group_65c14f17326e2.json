@@ -414,7 +414,7 @@
                 "id": ""
             },
             "acfe_repeater_stylised_button": 0,
-            "layout": "row",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -475,7 +475,7 @@
         },
         {
             "key": "field_65cf9f79d79ab",
-            "label": "Dog",
+            "label": "Dog of the Week",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -580,7 +580,7 @@
             "name": "square_images",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "These should be at least 510px squared.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -589,7 +589,7 @@
                 "id": ""
             },
             "acfe_repeater_stylised_button": 0,
-            "layout": "row",
+            "layout": "block",
             "pagination": 0,
             "min": 2,
             "max": 2,
@@ -614,13 +614,13 @@
                     "uploader": "",
                     "return_format": "url",
                     "acfe_thumbnail": 0,
-                    "min_width": 510,
-                    "min_height": 510,
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
-                    "max_width": 510,
-                    "max_height": 510,
+                    "max_width": "",
+                    "max_height": "",
                     "max_size": "",
-                    "mime_types": ".png, .webp, .jpg, .jpeg",
+                    "mime_types": "",
                     "preview_size": "medium",
                     "library": "all",
                     "parent_repeater": "field_65cfa6be34a80"
@@ -633,7 +633,7 @@
             "name": "rectangular_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "This image should be at least 840px wide.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -644,13 +644,13 @@
             "uploader": "",
             "return_format": "url",
             "acfe_thumbnail": 0,
-            "min_width": 840,
-            "min_height": 420,
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
-            "max_width": 840,
-            "max_height": 420,
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
-            "mime_types": ".png, .webp, .jpg, .jpeg",
+            "mime_types": "",
             "preview_size": "medium",
             "library": "all"
         }
@@ -668,7 +668,7 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "above_field",
     "hide_on_screen": [
         "block_editor",
         "the_content",
@@ -694,5 +694,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1710533691
+    "modified": 1710967072
 }

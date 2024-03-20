@@ -20,31 +20,31 @@
             "endpoint": 0
         },
         {
-            "key": "field_65ce9b5e4bd61",
-            "label": "Background",
-            "name": "background",
+            "key": "field_65f89190249a7",
+            "label": "Single Location Hero",
+            "name": "single_location_hero",
             "aria-label": "",
-            "type": "image",
+            "type": "clone",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "uploader": "",
-            "return_format": "url",
-            "acfe_thumbnail": 0,
-            "min_width": 1920,
-            "min_height": 550,
-            "min_size": "",
-            "max_width": 1920,
-            "max_height": 550,
-            "max_size": "",
-            "mime_types": ".jpg, .jpeg, .png, .webp",
-            "preview_size": "medium",
-            "library": "all"
+            "clone": [
+                "group_65f8adb2336fa"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
         },
         {
             "key": "field_65ce9b8c4bd62",
@@ -69,7 +69,7 @@
             "name": "address",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "The address of the location.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -90,7 +90,7 @@
             "name": "get_directions_link",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Go to <a href=\"https:\/\/maps.google.com\" target=\"_blank\">Google Maps<\/a>, search for the location, then click <strong>Directions<\/strong>. Instead of selecting a starting point, copy the web address and paste it here.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -110,7 +110,7 @@
             "name": "phone",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "The phone number for this location.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -130,7 +130,7 @@
             "name": "hours",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Enter the operating hours for this location. Use the three letter abbreviation.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -153,7 +153,7 @@
                     "name": "day",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "Use the three letter abbreviation.",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -197,7 +197,7 @@
             "name": "location_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "This image will show up where ever this location is linked with an image, as well as the location specific page. <strong>It should be at least 595px wide and 335px tall.<\/strong>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -208,13 +208,13 @@
             "uploader": "",
             "return_format": "array",
             "acfe_thumbnail": 0,
-            "min_width": 595,
-            "min_height": 335,
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
-            "max_width": 595,
-            "max_height": 335,
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
-            "mime_types": ".png, .webp, .jpg, .jpeg",
+            "mime_types": "",
             "preview_size": "medium",
             "library": "all"
         },
@@ -224,7 +224,7 @@
             "name": "map",
             "aria-label": "",
             "type": "google_map",
-            "instructions": "",
+            "instructions": "Search for the location here and it will display a map on the location specific page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -251,7 +251,7 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "above_field",
     "hide_on_screen": [
         "block_editor",
         "the_content",
@@ -277,5 +277,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1710529224
+    "modified": 1710943877
 }

@@ -20,31 +20,31 @@
             "endpoint": 0
         },
         {
-            "key": "field_65cfd19c44437",
-            "label": "Background",
-            "name": "background",
+            "key": "field_65f9af700533d",
+            "label": "Single Service Hero",
+            "name": "single_service_hero",
             "aria-label": "",
-            "type": "image",
+            "type": "clone",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "uploader": "",
-            "return_format": "url",
-            "acfe_thumbnail": 0,
-            "min_width": 1920,
-            "min_height": 450,
-            "min_size": "",
-            "max_width": 1920,
-            "max_height": 450,
-            "max_size": "",
-            "mime_types": ".jpg, .jpeg, .png, .webp",
-            "preview_size": "medium",
-            "library": "all"
+            "clone": [
+                "group_65f8adb2336fa"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
         },
         {
             "key": "field_65cfd21144438",
@@ -69,7 +69,7 @@
             "name": "headline",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "This shows up on the service specific page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -89,7 +89,7 @@
             "name": "information",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "This is an informational area you can use to describe the service.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -109,7 +109,7 @@
             "name": "service_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "This image should be 510px squared.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -120,11 +120,11 @@
             "uploader": "",
             "return_format": "array",
             "acfe_thumbnail": 0,
-            "min_width": 510,
-            "min_height": 510,
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
-            "max_width": 510,
-            "max_height": 510,
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
             "mime_types": ".jpg, .jpeg, .png, .webp",
             "preview_size": "medium",
@@ -135,8 +135,8 @@
             "label": "Shop Online Link",
             "name": "shop_online_link",
             "aria-label": "",
-            "type": "text",
-            "instructions": "",
+            "type": "link",
+            "instructions": "Use this to link to a specific shopping page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -144,11 +144,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array"
         }
     ],
     "location": [
@@ -163,8 +159,8 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "left",
-    "instruction_placement": "label",
+    "label_placement": "top",
+    "instruction_placement": "above_field",
     "hide_on_screen": [
         "block_editor",
         "the_content",
@@ -190,5 +186,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1710531047
+    "modified": 1710950454
 }

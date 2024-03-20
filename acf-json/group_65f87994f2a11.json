@@ -1,0 +1,70 @@
+{
+    "key": "group_65f87994f2a11",
+    "title": "Module - Hero (Archive)",
+    "fields": [
+        {
+            "key": "field_65f9a197bdd1c",
+            "label": "About This Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The hero section on this page is created by randomly pulling in a hero from one of it's sub pages. For instance, if you are on the \"Store Locations\" page, it will grab one of the store locations' hero image\/video and use that.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65f87e859e776",
+            "label": "Page Title",
+            "name": "text_overlay",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "This is generally the name of the page, or something close to it.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "above_field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1710965420
+}

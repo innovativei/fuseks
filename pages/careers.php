@@ -20,7 +20,11 @@ get_header(); ?>
                         <?php
                     endif;
                     if(get_field('intro_information')):
-                        the_field('intro_information');
+                        ?>
+                        <div class="wysiwyg">
+                            <?php the_field('intro_information'); ?>
+                        </div>
+                        <?php
                     endif;
                     ?>
                     <div class="buttons">
@@ -46,8 +50,10 @@ get_header(); ?>
                     if(get_field('mission')):
                         ?>
                         <h3 class="black">Mission</h3>
+                        <div class="wysiwyg">
+                            <?php the_field('mission'); ?>
+                        </div>
                         <?php
-                        the_field('mission');
                     endif;
                     ?>
                 </div>
@@ -56,8 +62,10 @@ get_header(); ?>
                     if(get_field('vision')):
                         ?>
                         <h3 class="black">Vision</h3>
+                        <div class="wysiwyg">
+                            <?php the_field('vision'); ?>
+                        </div>
                         <?php
-                        the_field('vision');
                     endif;
                     ?>
                 </div>
@@ -116,7 +124,11 @@ get_header(); ?>
                         <?php
                     endif;
                     if(get_field('benefits_perks_information')):
-                        the_field('benefits_perks_information');
+                        ?>
+                        <div class="wysiwyg">
+                            <?php the_field('benefits_perks_information'); ?>
+                        </div>
+                        <?php
                     endif;
                     ?>
                 </div>

@@ -42,22 +42,21 @@ get_header();
 
     function build_service_block($service) {
         ?>
-        <div class="col-lg-4 col-sm-6 mb-3 mb-lg-4">
-            <a href="<?php echo $service['permalink']; ?>" class="d-block white-frame drop-shadow inset-shadow">
+        <div class="col-lg-4 col-sm-6">
+            <a href="<?php echo $service['permalink']; ?>" class="d-block white-frame drop-shadow inset-shadow img-link">
                 <img src="<?php echo $service['service_image']; ?>" class="img-fluid" alt="<?php echo $service['service_name']; ?>">
             </a>
-            <a href="<?php echo $service['permalink']; ?>" class="d-block pt-1 pt-lg-2">
-                <h2 class="black text-center mb-0">
+            <h2 class="black text-center mb-4">
+                <a href="<?php echo $service['permalink']; ?>" class="d-block pt-1">
                     <?php echo $service['service_name']; ?>
-                </h2>
-            </a>
+                </a>
+            </h2>
         </div>
         <?php
     }
 
     if(!empty($service_hopper)):
         ?>
-        
         <div class="container pt-5 pb-3 py-lg-5">
             <div class="row justify-content-center">
                 <?php
@@ -67,7 +66,6 @@ get_header();
                 ?>
             </div>
         </div>
-            
         <?php
     endif;
     ?>

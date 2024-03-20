@@ -36,7 +36,7 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "above_field",
     "hide_on_screen": "",
     "active": true,
     "description": "",
@@ -48,5 +48,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708192106
+    "modified": 1710863926
 }

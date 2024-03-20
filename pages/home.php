@@ -250,9 +250,13 @@ get_header(); ?>
                             <div class="row">
                                 <div class="col-lg-11">
                                     <?php
-                                    if(get_field('intro_paragraph')) {
-                                        the_field('intro_paragraph');
-                                    }
+                                    if(get_field('intro_paragraph')):
+                                        ?>
+                                        <div class="wysiwyg">
+                                            <?php the_field('intro_paragraph'); ?>
+                                        </div>
+                                        <?php
+                                    endif;
                                     ?>
                                 </div>
                             </div>

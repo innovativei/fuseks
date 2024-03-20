@@ -18,7 +18,11 @@ get_header(); ?>
                 <?php
             endif;
             if(get_field('intro_information')):
-                the_field('intro_information');
+                ?>
+                <div class="wysiwyg">
+                    <?php the_field('intro_information'); ?>
+                </div>
+                <?php
             endif;
             ?>
             <h1 class="black">Store Locations</h1>

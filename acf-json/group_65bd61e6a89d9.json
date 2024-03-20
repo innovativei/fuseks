@@ -26,7 +26,7 @@
             "name": "testimonial_type",
             "aria-label": "",
             "type": "radio",
-            "instructions": "",
+            "instructions": "There are two different options for testimonials: Text and Video.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -51,7 +51,7 @@
             "name": "text_testimonial",
             "aria-label": "",
             "type": "group",
-            "instructions": "",
+            "instructions": "All of the information relating to a text testimonial.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -94,11 +94,11 @@
                 },
                 {
                     "key": "field_65bd63b3592b5",
-                    "label": "Reviewer Name",
+                    "label": "Name",
                     "name": "reviewer_name",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "The name of the person that is giving the testimonial.",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -114,11 +114,11 @@
                 },
                 {
                     "key": "field_65bd6450592b6",
-                    "label": "Reviewer Info",
+                    "label": "Title",
                     "name": "reviewer_info",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "Example:\r\n<em>Customer since 2018<\/em>",
+                    "instructions": "Whatever adds credibility to the above person's testimonial.<br><br>Example: <em>Customer since 2018<\/em>",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -143,7 +143,7 @@
             "name": "video_testimonial",
             "aria-label": "",
             "type": "group",
-            "instructions": "",
+            "instructions": "All of the information relating to a video testimonial.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -169,7 +169,7 @@
                     "name": "video_testimonial_type",
                     "aria-label": "",
                     "type": "radio",
-                    "instructions": "",
+                    "instructions": "Videos can be added via either YouTube or Vimeo. Choose here.",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -310,7 +310,7 @@
                     "name": "about_toggle",
                     "aria-label": "",
                     "type": "true_false",
-                    "instructions": "",
+                    "instructions": "All Testimonials added to the About Page will go into a slider and be randomized on page load.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -323,32 +323,6 @@
                     "ui_on_text": "Enable",
                     "ui_off_text": "Disable",
                     "ui": 1
-                },
-                {
-                    "key": "field_65cc04984e19b",
-                    "label": "Note",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "message",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_65cc04d14e19c",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "All Testimonials added to the About Page will go into a slider.",
-                    "new_lines": "wpautop",
-                    "esc_html": 0
                 },
                 {
                     "key": "field_65cc04754e199",
@@ -373,7 +347,7 @@
                     "name": "locations_rel",
                     "aria-label": "",
                     "type": "relationship",
-                    "instructions": "",
+                    "instructions": "If you would like to add testimonials to certain locations, you can do so here.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -420,7 +394,7 @@
                     "name": "services_rel",
                     "aria-label": "",
                     "type": "relationship",
-                    "instructions": "",
+                    "instructions": "If you would like to add testimonials to certain services, you can do so here.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -462,10 +436,10 @@
         ]
     ],
     "menu_order": 0,
-    "position": "acf_after_title",
-    "style": "seamless",
+    "position": "normal",
+    "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "above_field",
     "hide_on_screen": [
         "permalink",
         "the_content",
@@ -492,5 +466,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708192225
+    "modified": 1710955886
 }

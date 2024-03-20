@@ -3,6 +3,24 @@
     "title": "Options - Error",
     "fields": [
         {
+            "key": "field_65fb33a99bb2d",
+            "label": "Error Page Info",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can find the error page by going to any incorrect\/unset url like <a href=\"\/asdf\" target=\"_blank\">https:\/\/fusekstruevalue.com\/asdf<\/a>.<br \/><br \/>Each one of the following images should be at least 510px squared.",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
             "key": "field_65d4db1353b6e",
             "label": "Brands Image",
             "name": "brands_image",
@@ -96,8 +114,8 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "left",
-    "instruction_placement": "label",
+    "label_placement": "top",
+    "instruction_placement": "above_field",
     "hide_on_screen": "",
     "active": true,
     "description": "",
@@ -109,5 +127,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708448592
+    "modified": 1710962543
 }

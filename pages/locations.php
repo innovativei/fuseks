@@ -180,7 +180,7 @@ get_header();
                         <div class="arrow-sm next"></div>
                     </div>
                 </div>
-                <div class="slider-wrapper d-block d-md-none">
+                <div class="slider-wrapper d-block d-md-none mb-5">
                     <div 
                         class="slider-hand-arrows brand" 
                         data-autoplay="true" 
@@ -228,8 +228,11 @@ get_header();
                                 $first_name = get_field('first_name');
                                 $last_name  = get_field('last_name');
                                 $photo      = get_field('photo');
-                                $caption    = get_field('caption');
-
+                                if(get_field('caption')) {
+                                    $caption    = get_field('caption');
+                                }else{
+                                    $caption    = '';
+                                }
                                 $team_hopper[$i] = array(
                                     'first_name'    => $first_name,
                                     'last_name'     => $last_name,
@@ -257,7 +260,11 @@ get_header();
                         <strong>
                             <?php echo $team_member['first_name'] . ' ' . $team_member['last_name']; ?>
                         </strong>
-                        <br><?php echo $team_member['caption']; ?>
+                        <?php
+                        if($team_member['caption'] != ''):
+                            echo '<br />' . $team_member['caption'];
+                        endif;
+                        ?>
                     </p>
                 </div>
                 <?php

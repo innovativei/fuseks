@@ -8,24 +8,46 @@ $service_args = array(
 
 $service_query = new WP_Query($service_args);
 
-$service_bg = array();
+$service_hero = array();
 $i = 0;
 
 if($service_query->have_posts()):
     while($service_query->have_posts()):
         $service_query->the_post();
-        $service_bg_image = get_field('background');
-        $service_bg[$i] = $service_bg_image;
+        $service_hero[$i]['type']          = get_field('hero_type');
+
+        if($service_hero[$i]['type']       == 'image'){
+            $service_hero[$i]['url']       = get_field('background');
+        }elseif($service_hero[$i]['type']  == 'video'){
+            $service_hero[$i]['url']       = get_field('background_video');
+            $service_hero[$i]['poster']    = get_field('poster');
+        }
         $i++;
     endwhile;
     wp_reset_postdata();
 endif;
 
-// Reset & Shuffle
+// Reset & Shuffle & Choose
 unset($i);
-shuffle($service_bg);
-?>
+shuffle($service_hero);
+$selected_hero = $service_hero[0];
 
-<div id="hero" class="location shade d-flex justify-content-center align-items-center" style="background-image: url(<?php echo $service_bg[0]; ?>)">
-    <h1 class="white massive text-center mb-0">Our Services</h1>
-</div>
+if($selected_hero['type'] == 'image'):
+    ?>
+    <div id="hero" class="default shade d-flex justify-content-center align-items-center" style="background-image: url(<?php echo $selected_hero['url']; ?>)">
+        <h1 class="white massive text-center mb-0">
+            <?php the_field('text_overlay'); ?>
+        </h1>
+    </div>
+    <?php
+elseif($selected_hero['type'] == 'video'):
+    ?>
+    <div id="hero" class="default shade d-flex justify-content-center align-items-center">
+        <video playsinline autoplay muted loop style="background-image: url(<?php echo $selected_hero['poster']; ?>);" src="<?php echo $selected_hero['url']; ?>"></video>
+        <h1 class="white massive text-center mb-0">
+            <?php the_field('text_overlay'); ?>
+        </h1>
+    </div>
+    <?php
+endif;
+?>

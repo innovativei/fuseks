@@ -3,6 +3,50 @@
     "title": "Page - About",
     "fields": [
         {
+            "key": "field_65f9f72a87346",
+            "label": "Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65f9f73287347",
+            "label": "About Hero",
+            "name": "about_hero",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_65f8adb2336fa"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
             "key": "field_65d3e7a93c53d",
             "label": "Intro",
             "name": "",
@@ -92,7 +136,7 @@
             "name": "photo",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "This image should be at least 570px wide.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -487,7 +531,7 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "above_field",
     "hide_on_screen": [
         "block_editor",
         "the_content",
@@ -513,5 +557,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1710532279
+    "modified": 1710964681
 }

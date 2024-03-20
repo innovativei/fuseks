@@ -48,7 +48,7 @@
             "name": "photo",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "This headshot should be at least 270px squared.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -59,13 +59,13 @@
             "uploader": "",
             "return_format": "url",
             "acfe_thumbnail": 0,
-            "min_width": 270,
-            "min_height": 270,
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
-            "max_width": 270,
-            "max_height": 270,
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
-            "mime_types": ".jpg, .jpeg",
+            "mime_types": "",
             "preview_size": "medium",
             "library": "all"
         },
@@ -75,7 +75,7 @@
             "name": "caption",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Use this area to add something like \"With Fusek's since 2004\". Best to keep it short.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -95,7 +95,7 @@
             "name": "associated_locations",
             "aria-label": "",
             "type": "relationship",
-            "instructions": "",
+            "instructions": "Select the locations this team member is associated with.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -133,7 +133,7 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "above_field",
     "hide_on_screen": [
         "block_editor",
         "the_content",
@@ -159,5 +159,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1708192290
+    "modified": 1710954459
 }

@@ -4,23 +4,14 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header(); ?>
 
-<?php include(locate_template('parts/hero.php')); ?>
+<div id="application">
+    <?php include(get_stylesheet_directory() . '/parts/hero.php'); ?>
 
-<section class="page default">
-    <?php 
-    if(have_rows('content')) :
-        $counter = 0;
-        while(have_rows('content')) : 
-            the_row(); 
-            $counter++; 
-            $layout = get_row_layout();
-            ?>
-            <div id="section-<?php echo $counter; ?>">
-                <?php include(locate_template('parts/modules/'.$layout.'.php')); ?>
-            </div>
-            <?php
-        endwhile;
-    endif ?>
-</section>
+    <section class="bg-white py-5">
+        <div class="container">
+            content goes here.
+        </div>
+    </section>
+</div>
 
 <?php get_footer(); ?>

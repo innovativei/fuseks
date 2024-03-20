@@ -22,12 +22,22 @@ get_header();
                         <?php
                     endif;
                     if(get_field('information')):
-                        the_field('information');
+                        ?>
+                        <div class="wysiwyg">
+                            <?php the_field('information'); ?>
+                        </div>
+                        <?php
                     endif;
-                    if(get_field('shop_online_link')):
+                    $shop_online        = get_field('shop_online_link');
+                    if($shop_online):
+                        $shop_online_url    = $shop_online['url'];
+                        $shop_online_title  = $shop_online['title'];
+                        $shop_online_target = $shop_online['target'] ? $shop_online['target'] : '_self';
                         ?>
                         <div class="buttons">
-                            <a href="<?php the_field('shop_online_link'); ?>" class="button">Shop Online</a>
+                            <a href="<?php echo $shop_online_url; ?>" target="<?php echo $shop_online_target; ?>" class="button">
+                                <?php echo $shop_online_title; ?>
+                            </a>
                         </div>
                         <?php
                     endif;

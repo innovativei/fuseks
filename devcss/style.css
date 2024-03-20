@@ -5072,25 +5072,35 @@ nav.secondary ul.social li + li::before {
 }
 #hero.shade {
   position: relative;
+  overflow: hidden;
 }
 #hero.shade::before {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 #hero.shade h1, #hero.shade #careers .in-page-link, #careers #hero.shade .in-page-link {
   text-shadow: 0 0 6px #000;
-  z-index: 1;
+  z-index: 3;
 }
-#hero.location, #hero.service, #hero.brand, #hero.careers, #hero.about, #hero.contact {
+#hero.location, #hero.default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-top: 8px solid #000;
 }
+#hero.location video, #hero.default video {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 #hero.location {
   height: 550px;
 }
-#hero.service, #hero.brand, #hero.careers, #hero.about, #hero.contact {
+#hero.default {
   height: 350px;
 }
 
@@ -5112,10 +5122,7 @@ nav.secondary ul.social li + li::before {
   #hero h1.massive, #hero #careers .massive.in-page-link, #careers #hero .massive.in-page-link {
     font-size: 70px;
   }
-  #hero.location {
-    height: 300px;
-  }
-  #hero.service, #hero.brand, #hero.careers, #hero.about, #hero.contact {
+  #hero.location, #hero.default {
     height: 300px;
   }
 }
@@ -5130,7 +5137,7 @@ nav.secondary ul.social li + li::before {
   #hero.location {
     height: 220px;
   }
-  #hero.service, #hero.brand, #hero.careers, #hero.about, #hero.contact {
+  #hero.default {
     height: 200px;
   }
 }
